@@ -1,29 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ThemeProvider , Flex  } from "@chakra-ui/core"
-import {Button} from 'react-bootstrap';
-import SignUpOutter from './components/SignUpOutter'
+import SignUpOutter from './components/SignUpOutter';
 import LogInOutter from './components/LogInOutter';
-
+import HomeScreen from './components/HomeScreen';
+import Profile from './components/Profile';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-    <ThemeProvider>
-          <>
-          <Button variant="primary">Primary</Button>{' '}
-          <Button variant="secondary">Secondary</Button>{' '}
-          <Button variant="success">Success</Button>{' '}
-          <Button variant="warning">Warning</Button>{' '}
-          <Button variant="danger">Danger</Button> <Button variant="info">Info</Button>{' '}
-          <Button variant="light">Light</Button> <Button variant="dark">Dark</Button>{' '}
-          <Button variant="link">Link</Button>
-          </>
-          {/* <SignUpOutter></SignUpOutter> */}
-          {/* <LogInOutter></LogInOutter> */}
-    </ThemeProvider>
-    </div>
+    <>
+      <Router>
+      <Switch>
+        <Route path='/Home' component={HomeScreen}/>
+        <Route path='/SignUp' component={SignUpOutter}/>
+        <Route path='/LogIn' component={LogInOutter}/>
+        <Route path='/Profile' component={Profile}/>
+      </Switch>   
+      </Router>  
+    
+    {/*<LogInOutter></LogInOutter>*/}
+    {/*<SignUpOutter></SignUpOutter>*/}
+    </>
   );
 }
 
