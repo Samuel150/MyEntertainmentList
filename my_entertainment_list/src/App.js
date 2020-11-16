@@ -5,9 +5,11 @@ import LogInOutter from './components/LogInOutter';
 import HomeScreen from './components/HomeScreen';
 import Profile from './components/Profile';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import { ThemeProvider } from '@chakra-ui/core';
 
 function App() {
   return (
+    <ThemeProvider>   
     <>
       <Router>
       <Switch>
@@ -21,6 +23,7 @@ function App() {
     {/*<LogInOutter></LogInOutter>*/}
     {/*<SignUpOutter></SignUpOutter>*/}
     </>
+    </ThemeProvider>
   );
 }
 
