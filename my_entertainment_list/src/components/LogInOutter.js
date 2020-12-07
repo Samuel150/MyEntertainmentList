@@ -7,7 +7,7 @@ export class LogInOutter extends Component {
         return (
         <Flex direction='column' align='center' justify='center'>
             <Flex justify='center' align='center' w='100%' h='93vh'>
-                <Box w={["80vw","60vw","50vw","35vw"]}  bg="gray.200" p={4} boxShadow='md' rounded='lg'>
+                <Box w={["80vw","60vw","50vw","35vw"]}  bg="gray.200" p={10} boxShadow='md' rounded='lg'>
                     <LogIn></LogIn>
                 </Box>
             </Flex>

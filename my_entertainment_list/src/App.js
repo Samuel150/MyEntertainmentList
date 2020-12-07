@@ -19,9 +19,6 @@ function App() {
         <Route path='/Profile' component={Profile}/>
       </Switch>   
       </Router>  
-    
-    {/*<LogInOutter></LogInOutter>*/}
-    {/*<SignUpOutter></SignUpOutter>*/}
     </>
     </ThemeProvider>
   );
