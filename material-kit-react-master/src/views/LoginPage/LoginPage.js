@@ -22,7 +22,6 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
-
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
@@ -54,8 +53,9 @@ export default function LoginPage(props) {
             <GridItem xs={12} sm={12} md={4}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
+                  <CardHeader color="primaryAnime" className={classes.cardHeader}>
+                    <h4>Inciar Sesión</h4>
+                    <h5>con</h5>
                     <div className={classes.socialLine}>
                       <Button
                         justIcon
@@ -89,7 +89,7 @@ export default function LoginPage(props) {
                   <p className={classes.divider}>Or Be Classical</p>
                   <CardBody>
                     <CustomInput
-                      labelText="First Name..."
+                      labelText="Nombres..."
                       id="first"
                       formControlProps={{
                         fullWidth: true

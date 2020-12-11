@@ -77,6 +77,8 @@ const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
 
+
+
 const primaryBoxShadow = {
   boxShadow:
     "0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2)"
@@ -127,6 +129,17 @@ const primaryCardHeader = {
   background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
   ...primaryBoxShadow
 };
+const primaryAnimeCardHeader = {
+  color: "#fff",
+  background: "linear-gradient(60deg, #ff7d4a, #ff8858)",
+  ...primaryBoxShadow 
+}
+const secondaryAnimeCardHeader= {
+  color: "#fff",
+  background:"linear-gradient(60deg, #ffab4a, #ffb258)",
+  ...primaryBoxShadow 
+}
+
 const roseCardHeader = {
   color: "#fff",
   background: "linear-gradient(60deg, #ec407a, #d81b60)",
@@ -213,5 +226,7 @@ export {
   title,
   cardTitle,
   cardLink,
-  cardSubtitle
+  cardSubtitle,
+  primaryAnimeCardHeader,
+  secondaryAnimeCardHeader
 };
