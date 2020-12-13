@@ -39,15 +39,14 @@ export default function LoginPage(props) {
   }, 700);
   const classes = useStyles();
   const classesCheckbox = useStylesCheckbox();
-  const { ...rest } = props;
   return (
     <div >
       <Header
         absolute
         color="transparent"
         logo="true"
+        hasNavbar="false"
       />
-      
       <div
         className={classes.pageHeader}
         style={{

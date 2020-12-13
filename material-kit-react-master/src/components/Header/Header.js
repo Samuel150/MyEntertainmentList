@@ -16,10 +16,11 @@ import Menu from "@material-ui/icons/Menu";
 import image from "assets/img/logoMALPNG.png";
 // core components
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
-
+import { useHistory } from "react-router-dom";
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
+  let history = useHistory();
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   React.useEffect(() => {
@@ -54,7 +55,7 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
-  const { color, rightLinks, leftLinks, brand, fixed, absolute, fixedRight, logo , logoCenter} = props;
+  const { color, rightLinks, leftLinks, brand, fixed, absolute, fixedRight, logo , logoCenter, hasNavbar} = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -65,9 +66,9 @@ export default function Header(props) {
   if (logoCenter==="true"){
     marginRightValue = "41.3%";
   }
-  var brandComponent = <Button className={classes.title}>{brand}</Button>;
+  var brandComponent = <Button onClick={()=>history.push("/")} className={classes.title}>{hasNavbar?null:<img style={{height: '3em'}} src={image} />}</Button>;
   if (fixedRight==="true"){
-    brandComponent = <Button className={classes.titleRight}>{brand}</Button>;
+    brandComponent = <Button onClick={()=>history.push("/")} className={classes.titleRight}>{hasNavbar?null:<img style={{height: '3em'}} src={image} />}</Button>;
   }
   
   return (

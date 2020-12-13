@@ -42,6 +42,7 @@ export default function LoginPage(props) {
         color="transparent"
         logo="true" 
         logoCenter="true"
+        hasNavbar="false"
       />
       <div
         className={classes.pageHeader}
