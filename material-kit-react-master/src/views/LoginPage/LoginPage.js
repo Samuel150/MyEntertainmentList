@@ -46,8 +46,8 @@ export default function LoginPage(props) {
         absolute
         color="transparent"
         logo="true"
+        hasNavbar="false"
       />
-      
       <div
         className={classes.pageHeader}
         style={{

@@ -9,7 +9,8 @@ import {
   roseColor,
   transition,
   boxShadow,
-  drawerWidth
+  drawerWidth,
+  primaryColorAnime
 } from "assets/jss/material-kit-react.js";
 
 const headerStyle = {
@@ -85,7 +86,7 @@ const headerStyle = {
     margin: "20px 10px"
   },
   primary: {
-    backgroundColor: primaryColor,
+    backgroundColor: "#D76437",
     color: "#FFFFFF",
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46)"
