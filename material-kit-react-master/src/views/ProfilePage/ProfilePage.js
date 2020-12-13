@@ -4,9 +4,11 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
-import Camera from "@material-ui/icons/Camera";
-import Palette from "@material-ui/icons/Palette";
 import Favorite from "@material-ui/icons/Favorite";
+import Alarm from "@material-ui/icons/Alarm";
+import BlockRounded from "@material-ui/icons/BlockRounded";
+import Done from "@material-ui/icons/Done";
+import Visibility from "@material-ui/icons/Visibility";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -19,27 +21,23 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import profile from "assets/img/faces/christian.jpg";
 
-import studio1 from "assets/img/examples/studio-1.jpg";
-import studio2 from "assets/img/examples/studio-2.jpg";
-import studio3 from "assets/img/examples/studio-3.jpg";
-import studio4 from "assets/img/examples/studio-4.jpg";
-import studio5 from "assets/img/examples/studio-5.jpg";
-import work1 from "assets/img/examples/olu-eletu.jpg";
-import work2 from "assets/img/examples/clem-onojeghuo.jpg";
-import work3 from "assets/img/examples/cynthia-del-rio.jpg";
-import work4 from "assets/img/examples/mariya-georgieva.jpg";
-import work5 from "assets/img/examples/clem-onojegaw.jpg";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+
+import image from "assets/img/bgpromised.jpg";
+import image1 from "assets/img/bganime20.jpg";
+import image2 from "assets/img/bgcarrou1.png";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
 const useStyles = makeStyles(styles);
+
 
 export default function ProfilePage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   const imageClasses = classNames(
     classes.imgRaised,
-    classes.imgRoundedCircle,
     classes.imgFluid
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
@@ -56,148 +54,184 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+      <Parallax small filter image={require("assets/img/bganime15.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={6}>
+            <GridContainer justify="left">
+              <GridItem xs={12} sm={12} md={4}>
                 <div className={classes.profile}>
                   <div>
                     <img src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-instagram"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-facebook"} />
-                    </Button>
+                    <h3 className={classes.title}>Samuel Huanca</h3>
                   </div>
+                    <Button color="orange"><h4 className={classes.buttonText}>My Anime List</h4></Button>
+                    
                 </div>
               </GridItem>
+                <GridItem xs={12} sm={12} md={8}>
+                    <h2 className={classes.titleProf}>Anime Stats</h2>
+                    <hr></hr>
+                    <div >
+                    <h3 className={classes.leftcap}>Days: &nbsp;37.1</h3>
+                    <h3 className={classes.rightcap}> Mean Score: &nbsp;7.66 </h3>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    
+                    <GridContainer justify="right">
+                      <GridItem xs={12} sm={12} md={12}>
+                      <h3 className={classes.leftlist}><Done/> &nbsp;Watched Anime</h3>
+                      <h3 className={classes.rightlist}>45</h3>
+                      </GridItem>
+                    </GridContainer>
+                    <GridContainer justify="left">
+                      <GridItem xs={12} sm={12} md={12}>
+                      <h3 className={classes.leftlist}><Favorite/> &nbsp;Favorite Anime</h3>
+                      <h3 className={classes.rightlist}>2</h3>
+                      </GridItem>
+                    </GridContainer>
+                    <GridContainer justify="left">
+                      <GridItem xs={12} sm={12} md={12}>
+                      <h3 className={classes.leftlist}><Alarm/> &nbsp;Plan to watch Anime</h3>
+                      <h3 className={classes.rightlist}>3</h3>
+                      </GridItem>
+                    </GridContainer>
+                    <GridContainer justify="left">
+                      <GridItem xs={12} sm={12} md={12}>
+                      <h3 className={classes.leftlist}><Visibility/> &nbsp;Watching Anime</h3>
+                      <h3 className={classes.rightlist}>2</h3>
+                      </GridItem>
+                    </GridContainer>
+                    </div>      
+                </GridItem> 
             </GridContainer>
-            <div className={classes.description}>
-              <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{" "}
-              </p>
-            </div>
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
+          </div>
+        </div>
+            <div className={classes.container}>
+            <GridContainer justify="left">
+              <GridItem xs={12} sm={12} md={12} className={classes.navWrapper}>
                 <NavPills
                   alignCenter
-                  color="primary"
+                  color="orange"
                   tabs={[
                     {
-                      tabButton: "Studio",
-                      tabIcon: Camera,
+                      tabButton: "Watching",
+                      tabIcon: Visibility,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justify="left">
                           <GridItem xs={12} sm={12} md={4}>
+                          <Card style={{width: "20rem"}}>
                             <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
+                              style={{height: "150px", width: "100%", display: "block"}}
+                              className={classes.imgCardTop}
+                              src={image}
+                              alt="Card-img-cap"
                             />
-                            <img
-                              alt="..."
-                              src={studio2}
-                              className={navImageClasses}
-                            />
+                            <CardBody>
+                              <h4 className={classes.cardTitle}>The Promised Neverland &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
+                              <p>Set in the year 2045, Emma is an 11-year-old orphan living in Grace Field House</p>
+                              
+                            </CardBody>
+                          </Card>
+                            
+                            
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
+                          <Card style={{width: "20rem"}}>
                             <img
-                              alt="..."
-                              src={studio5}
-                              className={navImageClasses}
+                              style={{height: "150px", width: "100%", display: "block"}}
+                              className={classes.imgCardTop}
+                              src={image1}
+                              alt="Card-img-cap"
                             />
+                            <CardBody>
+                              <h4 className={classes.cardTitle}>Fate Zero &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
+                              <p>The story of Fate/Zero takes place ten years prior to the events of Fate/stay night, detailing the events of the Fourth Holy Grail War in Fuyuki City</p>
+                              
+                            </CardBody>
+                          </Card>
+                          </GridItem>
+                          <GridItem xs={12} sm={12} md={4}>
+                          <Card style={{width: "20rem"}}>
                             <img
-                              alt="..."
-                              src={studio4}
-                              className={navImageClasses}
+                              style={{height: "150px", width: "100%", display: "block"}}
+                              className={classes.imgCardTop}
+                              src={image2}
+                              alt="Card-img-cap"
                             />
+                            <CardBody>
+                              <h4 className={classes.cardTitle}>Japan Sinks &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
+                              <p>An original net animation (ONA) anime series adaptation of the novel Japan Sinks</p>
+                              
+                            </CardBody>
+                          </Card>
                           </GridItem>
                         </GridContainer>
                       )
                     },
                     {
-                      tabButton: "Work",
-                      tabIcon: Palette,
+                      tabButton: "Plan to watch",
+                      tabIcon: Alarm,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justify="left">
+                          
                           <GridItem xs={12} sm={12} md={4}>
+                          <Card style={{width: "20rem"}}>
                             <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
+                              style={{height: "150px", width: "100%", display: "block"}}
+                              className={classes.imgCardTop}
+                              src={image2}
+                              alt="Card-img-cap"
                             />
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work3}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work5}
-                              className={navImageClasses}
-                            />
+                            <CardBody>
+                              <h4 className={classes.cardTitle}>Japan Sinks &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
+                              <p>An original net animation (ONA) anime series adaptation of the novel Japan Sinks</p>
+                              
+                            </CardBody>
+                          </Card>
                           </GridItem>
                         </GridContainer>
                       )
                     },
                     {
-                      tabButton: "Favorite",
+                      tabButton: "Favorites",
                       tabIcon: Favorite,
                       tabContent: (
-                        <GridContainer justify="center">
+                        <GridContainer justify="left">
                           <GridItem xs={12} sm={12} md={4}>
+                          <Card style={{width: "20rem"}}>
                             <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
+                              style={{height: "150px", width: "100%", display: "block"}}
+                              className={classes.imgCardTop}
+                              src={image}
+                              alt="Card-img-cap"
                             />
-                            <img
-                              alt="..."
-                              src={studio3}
-                              className={navImageClasses}
-                            />
+                            <CardBody>
+                              <h4 className={classes.cardTitle}>The Promised Neverland &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
+                              <p>Set in the year 2045, Emma is an 11-year-old orphan living in Grace Field House</p>
+                              
+                            </CardBody>
+                          </Card>
+                            
+                            
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
+                          <Card style={{width: "20rem"}}>
                             <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
+                              style={{height: "150px", width: "100%", display: "block"}}
+                              className={classes.imgCardTop}
+                              src={image1}
+                              alt="Card-img-cap"
                             />
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
-                            />
+                            <CardBody>
+                              <h4 className={classes.cardTitle}>Fate Zero &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
+                              <p>The story of Fate/Zero takes place ten years prior to the events of Fate/stay night, detailing the events of the Fourth Holy Grail War in Fuyuki City</p>
+                              
+                            </CardBody>
+                          </Card>
                           </GridItem>
                         </GridContainer>
                       )
@@ -207,8 +241,8 @@ export default function ProfilePage(props) {
               </GridItem>
             </GridContainer>
           </div>
-        </div>
-      </div>
+          </div>
+
       <Footer />
     </div>
   );

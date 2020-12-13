@@ -23,6 +23,42 @@ const profilePageStyle = {
     marginTop: "-80px"
   },
   ...imagesStyle,
+  color: {
+    background: "#D76437",
+  },
+  buttonText: {
+    fontSize: "1.013rem",
+    maxWidth: "300",
+    color: "#FFFFFF"
+  },
+  leftcap: {
+    fontSize: "1.313rem",
+    float: "left",
+    margin: "15px 15px 0px 0px",
+    color: "#000000"
+  },
+  rightcap: {
+    fontSize: "1.313rem",
+    margin: "15px 0px 15px 0px",
+    float: "right",
+    color: "#000000"
+  },
+  leftlist: {
+    fontSize: "1.113rem",
+    float: "left",
+    margin: "0px 15px 0px 15px",
+    color: "#000000"
+  },
+  rightlist: {
+    fontSize: "1.113rem",
+    float: "right",
+    margin: "0px 40px 15px 15px",
+    color: "#000000"
+  },
+  titleProf: {
+    fontSize: "2.013rem",
+    color: "#D76437"
+  },
   main: {
     background: "#FFFFFF",
     position: "relative",
