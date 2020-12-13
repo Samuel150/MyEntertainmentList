@@ -51,7 +51,7 @@ export default function ProfilePage(props) {
               <GridItem xs={12} sm={12} md={4}>
                 <div className={classes.profile}>
                   <div>
-                    <img src={profile} alt="..." className={imageClasses} />
+                    <img style={{height: "10em"}} src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
                     <h3 className={classes.title}>Samuel Huanca</h3>
