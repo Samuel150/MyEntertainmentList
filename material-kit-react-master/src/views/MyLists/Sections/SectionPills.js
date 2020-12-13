@@ -26,16 +26,19 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 
-
+import image1 from "assets/img/portFMA.jpg";
+import image2 from "assets/img/portGL.jpg";
+import image3 from "assets/img/portSNK.jpg";
+import image4 from "assets/img/portOP.jpg";
 
 function createData(number, image, titulo, puntaje, progreso) {
   return { number, image, titulo, puntaje, progreso };
 }
 const rows = [
-  createData(1, 159, "Full Metal Alchemist", 10, 64),
-  createData(2, 237, "Tengen Toppa Gurren Lagann", 10, 27),
-  createData(3, 262, "Shingeki no kyojin", 9, 20),
-  createData(4, 305, "One piece", 9, 925),
+  createData(1, image1, "Full Metal Alchemist", 10, 64),
+  createData(2, image2, "Tengen Toppa Gurren Lagann", 10, 27),
+  createData(3, image3, "Shingeki no kyojin", 9, 20),
+  createData(4, image4, "One piece", 9, 925),
 
 ];
 
@@ -48,16 +51,16 @@ export default function SectionPills() {
       <div className={classes.container}>
         <div id="navigation-pills">
           <div className={classes.title}>
-            <h3>Todas tus listas de anime</h3>
+            <h2 className={classes.titleCarousel}>Todas tus listas de anime</h2>
           </div>
 
           <GridContainer  justify="center">
             <GridItem xs={90} sm={90} md={90} lg={90}>
               <NavPills
-                color="primary"
+                color= "orange"
                 tabs={[
                   {
-                    tabButton: "Todas",
+                    tabButton: "Todos",
                     tabContent: (
                       <TableContainer component={Paper}>
                       <Table className={classes.table} size="big" aria-label="a dense table" stickyHeader aria-label="sticky table">
@@ -76,7 +79,7 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <div><img src="assets/img/animebg32.jpg" alt="" border="0" height="100" width="100" /></div> </TableCell>
+                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> {row.titulo} </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
@@ -107,7 +110,7 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <div><img src="assets/img/animebg32.jpg" alt="" border="0" height="100" width="100" /></div> </TableCell>
+                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> {row.titulo} </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
@@ -138,7 +141,7 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <div><img src="assets/img/animebg32.jpg" alt="" border="0" height="100" width="100" /></div> </TableCell>
+                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> {row.titulo} </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
@@ -169,7 +172,7 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <div><img src="assets/img/animebg32.jpg" alt="" border="0" height="100" width="100" /></div> </TableCell>
+                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> {row.titulo} </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
@@ -200,7 +203,7 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <div><img src="assets/img/animebg32.jpg" alt="" border="0" height="100" width="100" /></div> </TableCell>
+                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> {row.titulo} </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
@@ -231,7 +234,7 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <div><img src="assets/img/animebg32.jpg" alt="" border="0" height="100" width="100" /></div> </TableCell>
+                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> {row.titulo} </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
