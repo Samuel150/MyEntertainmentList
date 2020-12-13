@@ -2,7 +2,9 @@ import {
   primaryColor,
   dangerColor,
   roseColor,
-  grayColor
+  grayColor,
+  primaryColorAnime,
+  secondaryColorAnime
 } from "assets/jss/material-kit-react.js";
 
 const customCheckboxRadioSwitch = {
@@ -40,7 +42,7 @@ const customCheckboxRadioSwitch = {
     marginBottom: "0"
   },
   checked: {
-    color: primaryColor + "!important"
+    color: primaryColorAnime + "!important"
   },
   checkedIcon: {
     width: "20px",

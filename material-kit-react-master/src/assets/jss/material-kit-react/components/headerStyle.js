@@ -9,7 +9,8 @@ import {
   roseColor,
   transition,
   boxShadow,
-  drawerWidth
+  drawerWidth,
+  primaryColorAnime
 } from "assets/jss/material-kit-react.js";
 
 const headerStyle = {
@@ -39,6 +40,7 @@ const headerStyle = {
     position: "fixed",
     zIndex: "1100"
   },
+
   container: {
     ...container,
     minHeight: "50px",
@@ -65,11 +67,26 @@ const headerStyle = {
       background: "transparent"
     }
   },
+  titleRight: {
+    float: "right",
+    ...defaultFont,
+    lineHeight: "30px",
+    fontSize: "18px",
+    borderRadius: "3px",
+    textTransform: "none",
+    color: "inherit",
+    padding: "8px 16px",
+    letterSpacing: "unset",
+    "&:hover,&:focus": {
+      color: "inherit",
+      background: "transparent"
+    }
+  },
   appResponsive: {
     margin: "20px 10px"
   },
   primary: {
-    backgroundColor: primaryColor,
+    backgroundColor: "#D76437",
     color: "#FFFFFF",
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46)"

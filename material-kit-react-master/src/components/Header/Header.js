@@ -13,6 +13,7 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
+import image from "assets/img/logoMALPNG.png";
 // core components
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
@@ -53,14 +54,22 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
-  const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
+  const { color, rightLinks, leftLinks, brand, fixed, absolute, fixedRight, logo , logoCenter} = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  var marginRightValue = "11.3%";
+  if (logoCenter==="true"){
+    marginRightValue = "41.3%";
+  }
+  var brandComponent = <Button className={classes.title}>{brand}</Button>;
+  if (fixedRight==="true"){
+    brandComponent = <Button className={classes.titleRight}>{brand}</Button>;
+  }
+  
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
@@ -73,20 +82,27 @@ export default function Header(props) {
           ) : (
             brandComponent
           )}
+          
         </div>
+        
         <Hidden smDown implementation="css">
           {rightLinks}
-        </Hidden>
-        <Hidden mdUp>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerToggle}
-          >
-            <Menu />
-          </IconButton>
-        </Hidden>
+        </Hidden> 
+        {logo === "true" ? (
+            <img src={image} style={{width:"18%", height: "auto", marginRight: marginRightValue}}></img>
+          ) : (
+            <Hidden mdUp>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerToggle}
+              >
+                <Menu />
+              </IconButton>
+            </Hidden>
+          )}
       </Toolbar>
+      
       <Hidden mdUp implementation="js">
         <Drawer
           variant="temporary"
@@ -105,6 +121,7 @@ export default function Header(props) {
       </Hidden>
     </AppBar>
   );
+  
 }
 
 Header.defaultProp = {
