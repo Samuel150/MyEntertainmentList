@@ -5,7 +5,10 @@ import {
   infoColor,
   successColor,
   warningColor,
-  dangerColor
+  dangerColor,
+  primaryColorAnime,
+  secondaryColorAnime,
+  whiteColor
 } from "assets/jss/material-kit-react.js";
 
 const buttonStyle = {
@@ -191,7 +194,7 @@ const buttonStyle = {
   simple: {
     "&,&:focus,&:hover,&:visited": {
       color: "#FFFFFF",
-      background: "transparent",
+      background: secondaryColorAnime,
       boxShadow: "none"
     },
     "&$primary": {
@@ -201,7 +204,7 @@ const buttonStyle = {
     },
     "&$info": {
       "&,&:focus,&:hover,&:visited": {
-        color: infoColor
+        color: "infoColor"
       }
     },
     "&$success": {
@@ -212,6 +215,11 @@ const buttonStyle = {
     "&$warning": {
       "&,&:focus,&:hover,&:visited": {
         color: warningColor
+      }
+    },
+    "&$white": {
+      "&,&:focus,&:hover,&:visited": {
+        color: whiteColor
       }
     },
     "&$rose": {

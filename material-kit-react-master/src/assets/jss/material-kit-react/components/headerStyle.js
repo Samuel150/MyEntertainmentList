@@ -39,6 +39,7 @@ const headerStyle = {
     position: "fixed",
     zIndex: "1100"
   },
+
   container: {
     ...container,
     minHeight: "50px",
@@ -52,6 +53,21 @@ const headerStyle = {
     flex: 1
   },
   title: {
+    ...defaultFont,
+    lineHeight: "30px",
+    fontSize: "18px",
+    borderRadius: "3px",
+    textTransform: "none",
+    color: "inherit",
+    padding: "8px 16px",
+    letterSpacing: "unset",
+    "&:hover,&:focus": {
+      color: "inherit",
+      background: "transparent"
+    }
+  },
+  titleRight: {
+    float: "right",
     ...defaultFont,
     lineHeight: "30px",
     fontSize: "18px",

@@ -6,6 +6,8 @@ import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
+import Person from "@material-ui/icons/Person";
+import PersonOutline from "@material-ui/icons/PersonOutline";
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -19,17 +21,10 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import {Link} from 'react-router-dom';
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Check from "@material-ui/icons/Check";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "assets/img/bganime36.jpg";
-
-import stylesCheckbox from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
-
-const useStylesCheckbox = makeStyles(stylesCheckbox);
+import image from "assets/img/bganime18.jpg";
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
@@ -38,16 +33,16 @@ export default function LoginPage(props) {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
-  const classesCheckbox = useStylesCheckbox();
   const { ...rest } = props;
   return (
-    <div >
-      <Header
+    <div>
+    <Header
         absolute
+        fixedRight="false"
         color="transparent"
-        logo="true"
+        logo="true" 
+        logoCenter="true"
       />
-      
       <div
         className={classes.pageHeader}
         style={{
@@ -56,13 +51,13 @@ export default function LoginPage(props) {
           backgroundPosition: "top center"
         }}
       >
-        <div className={classes.container} >
-          <GridContainer justify="flex-end" style={{marginTop: "5vw"}}>
+        <div className={classes.container}>
+          <GridContainer justify="center" style={{marginTop: "5vw"}}>
             <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
                   <CardHeader color="primaryAnime" className={classes.cardHeader}>
-                    <h4>Inciar Sesión</h4>
+                    <h4>Registrarse</h4>
                     <h5>con</h5>
                     <div className={classes.socialLine}>
                       <Button
@@ -83,7 +78,6 @@ export default function LoginPage(props) {
                       >
                         <i className={"fab fa-facebook"} />
                       </Button>
-                    
                       <Button
                         justIcon
                         href="#pablo"
@@ -91,16 +85,13 @@ export default function LoginPage(props) {
                         color="transparent"
                         onClick={e => e.preventDefault()}
                       >
-                       
-                          <i className={"fab fa-google-plus-g"} />
-                       
+                        <i className={"fab fa-google-plus-g"} />
                       </Button>
-                
                     </div>
                   </CardHeader>
                   <p className={classes.divider}>O de manera clásica</p>
                   <CardBody>
-                    {/* <CustomInput
+                    <CustomInput
                       labelText="Nombres..."
                       id="first"
                       formControlProps={{
@@ -114,9 +105,39 @@ export default function LoginPage(props) {
                           </InputAdornment>
                         )
                       }}
-                    /> */}
+                    />
                     <CustomInput
-                      labelText="Email..."
+                      labelText="Apellidos..."
+                      id="first"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <People className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Apodo..."
+                      id="first"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <PersonOutline className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Correo..."
                       id="email"
                       formControlProps={{
                         fullWidth: true
@@ -131,7 +152,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Password"
+                      labelText="Contraseña"
                       id="pass"
                       formControlProps={{
                         fullWidth: true
@@ -148,35 +169,34 @@ export default function LoginPage(props) {
                         autoComplete: "off"
                       }}
                     />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        tabIndex={-1}
-                        
-                        checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
-                        icon={<Check className={classesCheckbox.uncheckedIcon} />}
-                        classes={{
-                          checked: classesCheckbox.checked,
-                          root: classesCheckbox.checkRoot
-                        }}
-                      />
-                    }
-                    classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
-                  />Mantener Sesión Abierta
+                    <CustomInput
+                      labelText="Repetir Contraseña"
+                      id="pass"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "password",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Icon className={classes.inputIconsColor}>
+                              lock_outline
+                            </Icon>
+                          </InputAdornment>
+                        ),
+                        autoComplete: "off"
+                      }}
+                    />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                  <Link to="/">
-                    <Button simple color="white" size="lg">
-                      Ingresar
-                    </Button>
-                  </Link>
-                  
+                    <Link to="/">
+                        <Button simple color="white" size="lg">
+                        Registrarse
+                        </Button>
+                    </Link>
                   </CardFooter>
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
-                    <p>Olvidaste tu contraseña <Link style={{color: "#0022ff"}} to="/"> Recuperar Cuenta</Link></p>
-                  </div>
-                  <div style={{textAlign: "center", marginBottom: "5%"}}>
-                    <p>No tienes una cuenta <Link style={{color: "#0022ff"}} to="/signup-page">Crear Cuenta</Link></p>
+                    <p>Ya tienes una cuenta <Link style={{color: "#0022ff"}} to="/login-page">Iniciar Sesión</Link></p>
                   </div>
                 </form>
               </Card>
