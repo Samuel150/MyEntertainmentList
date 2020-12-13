@@ -8,6 +8,16 @@ const carouselStyle = {
   marginAuto: {
     marginLeft: "auto !important",
     marginRight: "auto !important"
+  },
+  carrouselCap: {
+    fontSize: "2.413rem",
+    maxWidth: "500",
+    color: "#FFFFFF"
+  },
+  carrouselCapB: {
+    fontSize: "2.813rem",
+    maxWidth: "500",
+    color: "#000000"
   }
 };
 

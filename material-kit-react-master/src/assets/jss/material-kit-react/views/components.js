@@ -30,7 +30,7 @@ const componentsStyle = {
     color: "#000000"
   },
   titleCarousel: {
-    fontSize: "4.813rem",
+    fontSize: "4.013rem",
     maxWidth: "500",
     color: "#8A5A23"
   },

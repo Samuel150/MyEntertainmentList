@@ -1,6 +1,5 @@
 import {
   defaultFont,
-  primaryColor,
   primaryBoxShadow,
   infoColor,
   infoBoxShadow,
@@ -76,7 +75,7 @@ const customDropdownStyle = theme => ({
   },
   primaryHover: {
     "&:hover": {
-      backgroundColor: primaryColor,
+      backgroundColor: "#FFB258",
       color: "#FFFFFF",
       ...primaryBoxShadow
     }

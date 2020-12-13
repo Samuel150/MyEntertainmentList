@@ -13,7 +13,7 @@ import Card from "components/Card/Card.js";
 
 import image1 from "assets/img/bganime20.jpg";
 import image2 from "assets/img/bgcarrou1.png";
-import image3 from "assets/img/bgpromised.jpg";
+import image3 from "assets/img/bganime22.jpg";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 
@@ -40,7 +40,7 @@ export default function SectionCarousel() {
                 <Link to={"/login-page"} className={classes.link}>
                   <img src={image1} alt="First slide" className="slick-image" />
                   <div className="slick-caption">
-                    <h4>
+                    <h4 className={classes.carrouselCap}>
                       Fate Zero
                     </h4>
                   </div>
@@ -54,7 +54,7 @@ export default function SectionCarousel() {
                     className="slick-image"
                   />
                   <div className="slick-caption">
-                    <h4>
+                    <h4  className={classes.carrouselCap}> 
                       Japan Sinks
                     </h4>
                   </div>
@@ -63,10 +63,12 @@ export default function SectionCarousel() {
                 <div>
                 <Link to={"/login-page"} className={classes.link}>
                   <img src={image3} alt="Third slide" className="slick-image" />
-                  <div className="slick-caption">
-                    <h4>
-                      The Promised Neverland 
-                    </h4>
+                  <div className="slick-caption" >
+              
+                      <h4 className={classes.carrouselCap}>
+                        Attack on Titan
+                      </h4>
+                    
                   </div>
                 </Link>
                 </div>

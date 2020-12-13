@@ -29,6 +29,7 @@ import image1 from "assets/img/bganime20.jpg";
 import image2 from "assets/img/bgcarrou1.png";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import TemplatePage from "views/TemplatePage";
 
 const useStyles = makeStyles(styles);
 
@@ -40,20 +41,8 @@ export default function ProfilePage(props) {
     classes.imgRaised,
     classes.imgFluid
   );
-  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
-    <div>
-      <Header
-        color="transparent"
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 200,
-          color: "white"
-        }}
-        {...rest}
-      />
+    <TemplatePage>
       <Parallax small filter image={require("assets/img/bganime15.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
@@ -242,8 +231,6 @@ export default function ProfilePage(props) {
             </GridContainer>
           </div>
           </div>
-
-      <Footer />
-    </div>
+    </TemplatePage>
   );
 }
