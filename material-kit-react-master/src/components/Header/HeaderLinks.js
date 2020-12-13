@@ -36,10 +36,10 @@ export default function HeaderLinks(props) {
           }}
           dropdownList={[
             <Link to="/topAnime" className={classes.dropdownLink}>
-              Top Animes
+              Top Anime
             </Link>,
             <Link to="/news" className={classes.dropdownLink}>
-              Noticias
+              News
             </Link>
           ]}
         />
@@ -47,14 +47,14 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
-          buttonText="Comunidad"
+          buttonText="Community"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
           dropdownList={[
             <Link to="/forums" className={classes.dropdownLink}>
-              Foros
+              Forums
             </Link>
           ]}
         />
@@ -65,7 +65,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          Perfil
+          Profile
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -74,7 +74,7 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          Ingresar
+          Login
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -84,20 +84,20 @@ export default function HeaderLinks(props) {
           color="white"
           className={classes.navLink}
         >
-          Registrarse
+          Sign Up
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
-          buttonText="Ayuda"
+          buttonText="Help"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
           dropdownList={[
             <Link to="/about" className={classes.dropdownLink}>
-              Acerca de
+              About
             </Link>
           ]}
         />
