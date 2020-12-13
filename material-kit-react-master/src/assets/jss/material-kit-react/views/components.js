@@ -17,6 +17,23 @@ const componentsStyle = {
     maxWidth: "500px",
     margin: "10px 0 0"
   },
+  leftcap: {
+    fontSize: "1.313rem",
+    margin: "15px 0px 30px 0px",
+    float: "left",
+    color: "#000000"
+  },
+  rightcap: {
+    fontSize: "1.313rem",
+    margin: "15px 30px 0px 0px",
+    float: "right",
+    color: "#000000"
+  },
+  titleCarousel: {
+    fontSize: "4.813rem",
+    maxWidth: "500",
+    color: "#8A5A23"
+  },
   main: {
     background: "#FFFFFF",
     position: "relative",
@@ -33,6 +50,9 @@ const componentsStyle = {
   },
   textCenter: {
     textAlign: "center"
+  },
+  black: {
+    color: "#000000"
   }
 };
 

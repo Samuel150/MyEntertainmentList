@@ -70,13 +70,16 @@ const defaultFont = {
 };
 
 const primaryColor = "#9c27b0";
+const primaryColorAnime= "#ff8858";
+const secondaryColorAnime = "#ffb258";
 const warningColor = "#ff9800";
 const dangerColor = "#f44336";
 const successColor = "#4caf50";
 const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
-
+const whiteColor = "#ffffff";
+const blackcolor = "#000000";
 
 
 const primaryBoxShadow = {
@@ -134,6 +137,7 @@ const primaryAnimeCardHeader = {
   background: "linear-gradient(60deg, #ff7d4a, #ff8858)",
   ...primaryBoxShadow 
 }
+
 const secondaryAnimeCardHeader= {
   color: "#fff",
   background:"linear-gradient(60deg, #ffab4a, #ffb258)",
@@ -228,5 +232,9 @@ export {
   cardLink,
   cardSubtitle,
   primaryAnimeCardHeader,
-  secondaryAnimeCardHeader
+  secondaryAnimeCardHeader,
+  primaryColorAnime,
+  secondaryColorAnime,
+  whiteColor,
+  blackcolor
 };
