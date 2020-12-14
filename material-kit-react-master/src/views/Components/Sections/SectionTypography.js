@@ -24,6 +24,7 @@ const useStyles = makeStyles(styles);
 
 export default function SectionTypography() {
   const classes = useStyles();
+  
   return (
     <div className={classes.section}>
       <div className={classes.container}>

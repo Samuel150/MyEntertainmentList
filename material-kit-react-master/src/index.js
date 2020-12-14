@@ -14,8 +14,8 @@ import MyLists from "views/MyLists/MyLists.js";
 import NewsList from "views/NewsList/NewsList.js";
 import NewsDesc from "views/NewsDesc/NewsDesc.js";
 import SignUpPage from "views/SignUpPage/SignUpPage.js";
+import SearchResults from "views/SearchResults/SearchResults"
 import NotFoundPage from "views/NotFoundPage/NotFoundPage.js";
-
 
 var hist = createBrowserHistory();
 
@@ -29,9 +29,9 @@ ReactDOM.render(
       <Route path="/login" component={LoginPage} />
       <Route path="/signUp" component={SignUpPage} />
       <Route path="/newsDesc" component={NewsDesc} />
+      <Route path="/searchResults" component={SearchResults} />
       <Route exact path="/" component={Components} />
       <Route component={NotFoundPage} />
-
     </Switch>
   </Router>,
   document.getElementById("root")
