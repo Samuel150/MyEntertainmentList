@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useState }from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+import TemplatePage from "views/TemplatePage"
+import Parallax from "components/Parallax/Parallax.js";
+import classNames from "classnames";
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import Button from "components/CustomButtons/Button.js";
+import InputBase from '@material-ui/core/InputBase';
+import SearchIcon from '@material-ui/icons/Search';
+import Paper from '@material-ui/core/Paper';
+import IconButton from '@material-ui/core/IconButton';
+import stylesCheckbox from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+import Checkbox from "@material-ui/core/Checkbox";
+import Check from "@material-ui/icons/Check";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-import styles from "assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
+const useStylesCheckbox = makeStyles(stylesCheckbox);
+
+
 
 const useStyles = makeStyles(styles);
 
 export default function SearchResults() {
   const classes = useStyles();
-  var buscar = false;
+  const [count, setCount] = useState(false);
+  const classesCheckbox = useStylesCheckbox();
+  const tipo = ["Pelicula", "Serie", "Película Corta", "Documental"]
+  const genero = ["Acción", "Aventura", "Animación","Drama", "Comedia", "Fantasia", "Documental", "Historia", "Horror", "Sci-Fi", "Deporte", "Biografía", "Thriller"]
+  const estudio = ["Toei Animation", "Sunrise", "Production I.G.", "Madhouse", "J.C. Staff", "TMS Entertainment", "Studio Deen", "Studio Pierrot", "OML", "Nippon Animation"]
+  const ranking = ["All Anime", "Top Hiring", "Top Uncoming", "Top TV Series", "Top Movies", "Top Ovas", "Most Popular"]
+  const filtro = ["Mostrar todos los títulos", "Excluir títulos vistos por mí"]
   const resultados = [
     {
       title: "One Punch Man",
@@ -92,15 +115,193 @@ export default function SearchResults() {
       </GridItem>
     )
   }
+  var itemsTipo =[];
+  for (var i = 0; i<tipo.length;i++){
+    itemsTipo.push(
+      <GridItem xs={12} sm={2}>
+        <FormControlLabel
+          control={
+          <Checkbox
+            tabIndex={-1}
+            checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
+            icon={<Check className={classesCheckbox.uncheckedIcon} />}
+            classes={{
+              checked: classesCheckbox.checked,
+              root: classesCheckbox.checkRoot
+            }}
+          />
+          }
+          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
+          label={tipo[i]}
+        />
+      </GridItem>
+    )  
+  }
+  var itemsGenero =[];
+  for (var i = 0; i<genero.length;i++){
+    itemsGenero.push(
+      <GridItem alignContent="flex-start" xs={12} sm={2} >
+        <FormControlLabel
+          control={
+          <Checkbox
+            
+            tabIndex={-1}
+            checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
+            icon={<Check className={classesCheckbox.uncheckedIcon} />}
+            classes={{
+              checked: classesCheckbox.checked,
+              root: classesCheckbox.checkRoot
+            }}
+          />
+          }
+          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
+          label={genero[i]}
+        />
+      </GridItem>
+    )  
+  }
+  var itemsStudio = [];
+  for (var i = 0; i<estudio.length;i++){
+    itemsStudio.push(
+      <GridItem alignContent="flex-start" xs={12} sm={2} >
+        <FormControlLabel
+          control={
+          <Checkbox
+            
+            tabIndex={-1}
+            checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
+            icon={<Check className={classesCheckbox.uncheckedIcon} />}
+            classes={{
+              checked: classesCheckbox.checked,
+              root: classesCheckbox.checkRoot
+            }}
+          />
+          }
+          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
+          label={estudio[i]}
+        />
+      </GridItem>
+    )  
+  }
+  var itemsRanking = [];
+  for (var i = 0; i<ranking.length;i++){
+    itemsRanking.push(
+      <GridItem alignContent="flex-start" xs={12} sm={2} >
+        <FormControlLabel
+          control={
+          <Checkbox
+            
+            tabIndex={-1}
+            checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
+            icon={<Check className={classesCheckbox.uncheckedIcon} />}
+            classes={{
+              checked: classesCheckbox.checked,
+              root: classesCheckbox.checkRoot
+            }}
+          />
+          }
+          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
+          label={ranking[i]}
+        />
+      </GridItem>
+    )  
+  }
+  var itemsFiltro = [];
+  for (var i = 0; i<filtro.length;i++){
+    itemsFiltro.push(
+      <GridItem alignContent="flex-start" xs={12} sm={12} >
+        <FormControlLabel
+          control={
+          <Checkbox
+            
+            tabIndex={-1}
+            checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
+            icon={<Check className={classesCheckbox.uncheckedIcon} />}
+            classes={{
+              checked: classesCheckbox.checked,
+              root: classesCheckbox.checkRoot
+            }}
+          />
+          }
+          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
+          label={filtro[i]}
+        />
+      </GridItem>
+    )  
+  }
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRoundedCircle,
+    classes.imgFluid
+  );
+  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
     return (
-      <div id="images" className={classes.container}>
-          <div className={classes.title} >
-            <h2 style={{textAlign: "center"}}>Resultado de Búsqueda</h2>
-          </div>
-          <br />
-        <GridContainer>
-            {items}
-        </GridContainer>
+    <TemplatePage>
+      <Parallax small filter image={require("assets/img/bganimesearch.jpg")} />
+      <div style={{textAlign: "center", marginRight: "5%"}} className={classNames(classes.main, classes.mainRaised)}>
+        {count ? 
+        <>
+        <Button onClick={() => setCount(!count)} style={{float: "left",marginLeft: "5%", marginTop: "3%",verticalAlign: "middle"}} simple color="white" size="md">
+        <NavigateBeforeIcon style={{ verticalAlign: "middle", fontSize: 40}}/>Volver
+        </Button> 
+        <div className={classes.container}>
+            <div className={classes.title} >
+              <h2>  Resultado de Búsqueda</h2>
+            </div>
+            <br/>
+          <GridContainer>
+              {items}
+          </GridContainer>
+        </div>
+        </>
+        :
+        <>
+        <div className={classes.container}>
+            <div className={classes.title} >
+              <h2>  Buscar Anime</h2>
+
+            </div>
+            <br/>
+          <GridContainer alignItems="center" justify="center">
+            <GridItem xs={12} sm={5}>
+            <Paper component="form" >
+              <InputBase
+                placeholder="Titulo"
+              />
+              <IconButton onClick={() => setCount(!count)} type="submit"  aria-label="search">
+                < SearchIcon />
+              </IconButton>
+            </Paper>
+            </GridItem>
+          </GridContainer>
+          <h4 style={{textAlign: "left"}}>Tipo:</h4>
+          <GridContainer style={{textAlign: "left"}}>
+            {itemsTipo}
+          </GridContainer > 
+          <h4 style={{textAlign: "left"}}>Géneros:</h4>
+          <GridContainer style={{textAlign: "left"}} >
+            {itemsGenero}
+          </GridContainer>
+          <h4 style={{textAlign: "left"}}>Estudios:</h4>
+          <GridContainer style={{textAlign: "left"}} >
+            {itemsStudio}
+          </GridContainer>
+          <h4 style={{textAlign: "left"}}>Rankings:</h4>
+          <GridContainer style={{textAlign: "left"}} >
+            {itemsRanking}
+          </GridContainer>
+          <h4 style={{textAlign: "left"}}>Filtro:</h4>
+          <GridContainer style={{textAlign: "left"}} >
+            {itemsFiltro}
+            <Button onClick={() => setCount(!count)} style={{float: "center",marginLeft: "5%", marginTop: "3%",verticalAlign: "middle"}} simple color="white" size="md">
+        <ArrowForwardIosIcon style={{ verticalAlign: "middle", fontSize: 40}}/>Buscar
+        </Button>
+          </GridContainer>
+         
+        </div>
+        </>
+        }
       </div>
+    </TemplatePage>
     );
 }

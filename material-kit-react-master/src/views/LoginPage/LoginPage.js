@@ -152,7 +152,6 @@ export default function LoginPage(props) {
                     control={
                       <Checkbox
                         tabIndex={-1}
-                        
                         checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
                         icon={<Check className={classesCheckbox.uncheckedIcon} />}
                         classes={{
