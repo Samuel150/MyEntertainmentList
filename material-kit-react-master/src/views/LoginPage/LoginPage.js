@@ -5,11 +5,11 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
-import People from "@material-ui/icons/People";
+//import People from "@material-ui/icons/People";
 // core components
 import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
+//import HeaderLinks from "components/Header/HeaderLinks.js";
+// Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -39,15 +39,15 @@ export default function LoginPage(props) {
   }, 700);
   const classes = useStyles();
   const classesCheckbox = useStylesCheckbox();
-  const { ...rest } = props;
+  //const { ...rest } = props;
   return (
     <div >
       <Header
         absolute
         color="transparent"
         logo="true"
+        hasNavbar="false"
       />
-      
       <div
         className={classes.pageHeader}
         style={{
@@ -152,7 +152,6 @@ export default function LoginPage(props) {
                     control={
                       <Checkbox
                         tabIndex={-1}
-                        
                         checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
                         icon={<Check className={classesCheckbox.uncheckedIcon} />}
                         classes={{
@@ -176,7 +175,7 @@ export default function LoginPage(props) {
                     <p>Olvidaste tu contraseña <Link style={{color: "#0022ff"}} to="/"> Recuperar Cuenta</Link></p>
                   </div>
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
-                    <p>No tienes una cuenta <Link style={{color: "#0022ff"}} to="/signup-page">Crear Cuenta</Link></p>
+                    <p>No tienes una cuenta <Link style={{color: "#0022ff"}} to="/signUp">Crear Cuenta</Link></p>
                   </div>
                 </form>
               </Card>

@@ -14,6 +14,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
+import TemplatePage from "views/TemplatePage"
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionPills from "./Sections/SectionPills.js";
 /*import SectionBasics from "./Sections/SectionBasics.js";
@@ -36,18 +37,7 @@ export default function MyLists(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    <div>
-      <Header
-        brand="My Anime List"
-        rightLinks={<HeaderLinks />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      />
+    <TemplatePage>
       <Parallax image={require("assets/img/bganime.jpg")}>
         <div className={classes.container}>
           <GridContainer >
@@ -66,7 +56,6 @@ export default function MyLists(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionPills />
       </div>
-      <Footer />
-    </div>
+      </ TemplatePage>
   );
 }

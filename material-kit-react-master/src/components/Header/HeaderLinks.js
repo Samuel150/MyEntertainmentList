@@ -19,7 +19,6 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
-
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
@@ -38,7 +37,7 @@ export default function HeaderLinks(props) {
             <Link to="/topAnime" className={classes.dropdownLink}>
               Top Anime
             </Link>,
-            <Link to="/news" className={classes.dropdownLink}>
+            <Link to="/newslist" className={classes.dropdownLink}>
               News
             </Link>
           ]}

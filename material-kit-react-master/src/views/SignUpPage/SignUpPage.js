@@ -6,12 +6,12 @@ import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import People from "@material-ui/icons/People";
-import Person from "@material-ui/icons/Person";
+//import Person from "@material-ui/icons/Person";
 import PersonOutline from "@material-ui/icons/PersonOutline";
 // core components
 import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
+//import HeaderLinks from "components/Header/HeaderLinks.js";
+//import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -33,7 +33,7 @@ export default function LoginPage(props) {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
-  const { ...rest } = props;
+  //const { ...rest } = props;
   return (
     <div>
     <Header
@@ -42,6 +42,7 @@ export default function LoginPage(props) {
         color="transparent"
         logo="true" 
         logoCenter="true"
+        hasNavbar="false"
       />
       <div
         className={classes.pageHeader}
@@ -196,14 +197,13 @@ export default function LoginPage(props) {
                     </Link>
                   </CardFooter>
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
-                    <p>Ya tienes una cuenta <Link style={{color: "#0022ff"}} to="/login-page">Iniciar Sesión</Link></p>
+                    <p>Ya tienes una cuenta <Link style={{color: "#0022ff"}} to="/login">Iniciar Sesión</Link></p>
                   </div>
                 </form>
               </Card>
             </GridItem>
           </GridContainer>
         </div>
-        {/* <Footer whiteFont /> */}
       </div>
     </div>
   );

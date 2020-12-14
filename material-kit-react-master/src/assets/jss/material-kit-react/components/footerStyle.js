@@ -10,7 +10,10 @@ const footerStyle = {
     borderRadius: "3px",
     textDecoration: "none",
     position: "relative",
-    display: "block"
+    display: "block",
+    "&,&:hover,&:focus": {
+      color: "#8A4023"
+    }
   },
   left: {
     float: "left!important",
@@ -29,7 +32,7 @@ const footerStyle = {
     position: "relative"
   },
   a: {
-    color: primaryColor,
+    color: "gray",
     textDecoration: "none",
     backgroundColor: "transparent"
   },
