@@ -24,7 +24,7 @@ import Parallax from "components/Parallax/Parallax.js";
 import Quote from "components/Typography/Quote.js";
 import Muted from "components/Typography/Muted.js";
 import profile from "assets/img/faces/christian.jpg";
-
+import TemplatePage from "views/TemplatePage"
 import studio1 from "assets/img/examples/studio-1.jpg";
 import studio2 from "assets/img/examples/studio-2.jpg";
 import studio3 from "assets/img/examples/studio-3.jpg";
@@ -57,19 +57,7 @@ export default function NewsList(props) {
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
-    <div>
-      <Header
-        color="transparent"
-        brand="My Anime List"
-        rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 200,
-          color: "white"
-        }}
-        {...rest}
-      />
-
+  <TemplatePage>
 
       <Parallax small filter image={require("assets/img/bganimeNews.jpg")} />
       
@@ -78,7 +66,9 @@ export default function NewsList(props) {
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={12} >
-               <h2 className={classes.titleCarousel}>Últimas Noticias </h2>  
+               <h1 className={classes.titleCarousel}>Últimas Noticias </h1>  
+               <br></br>
+               <br></br>
               </GridItem>
 
               <GridItem >
@@ -87,7 +77,7 @@ export default function NewsList(props) {
                   <img src = {image1} className={classes.imgRounded} border="10" height="250" width="250" ></img>
                 </GridItem>
                 <GridItem xs={12} sm={9}>
-                <Link to={"/login-page"}><h3 className={classes.title}>GRAND SUMMONERS forma equipo con Re:ZERO para un enorme crossover</h3></Link>
+                <Link to={"/newsDesc"}><h3 className={classes.title}>GRAND SUMMONERS forma equipo con Re:ZERO para un enorme crossover</h3></Link>
                   
 
                   <Quote
@@ -210,11 +200,15 @@ export default function NewsList(props) {
               <br></br>
               <br></br>
               </GridItem>
+              <GridItem xs={17} sm={4} justify="left">
+                <h3 className={classes.titleProf}>Ver más noticias &gt;&gt; </h3>
+                <br></br>
+                <br></br>
+              </GridItem>
             </GridContainer>
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+      </ TemplatePage>
   );
 }

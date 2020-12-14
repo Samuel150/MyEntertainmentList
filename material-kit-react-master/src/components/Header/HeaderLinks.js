@@ -38,7 +38,7 @@ export default function HeaderLinks(props) {
             <Link to="/topAnime" className={classes.dropdownLink}>
               Top Anime
             </Link>,
-            <Link to="/news" className={classes.dropdownLink}>
+            <Link to="/newslist" className={classes.dropdownLink}>
               News
             </Link>
           ]}

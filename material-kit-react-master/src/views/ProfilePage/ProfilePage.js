@@ -56,7 +56,7 @@ export default function ProfilePage(props) {
                   <div className={classes.name}>
                     <h3 className={classes.title}>Samuel Huanca</h3>
                   </div>
-                    <Button color="orange"><h4 className={classes.buttonText}>My Anime List</h4></Button>
+                    <Button color="orange" href="mylists"><h4 className={classes.buttonText}>My Anime List</h4></Button>
                     
                 </div>
               </GridItem>
