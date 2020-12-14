@@ -176,7 +176,7 @@ export default function LoginPage(props) {
                     <p>Olvidaste tu contraseña <Link style={{color: "#0022ff"}} to="/"> Recuperar Cuenta</Link></p>
                   </div>
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
-                    <p>No tienes una cuenta <Link style={{color: "#0022ff"}} to="/signup-page">Crear Cuenta</Link></p>
+                    <p>No tienes una cuenta <Link style={{color: "#0022ff"}} to="/signUp">Crear Cuenta</Link></p>
                   </div>
                 </form>
               </Card>
