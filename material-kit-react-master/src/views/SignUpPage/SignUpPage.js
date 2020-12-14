@@ -197,14 +197,13 @@ export default function LoginPage(props) {
                     </Link>
                   </CardFooter>
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
-                    <p>Ya tienes una cuenta <Link style={{color: "#0022ff"}} to="/login-page">Iniciar Sesión</Link></p>
+                    <p>Ya tienes una cuenta <Link style={{color: "#0022ff"}} to="/login">Iniciar Sesión</Link></p>
                   </div>
                 </form>
               </Card>
             </GridItem>
           </GridContainer>
         </div>
-        {/* <Footer whiteFont /> */}
       </div>
     </div>
   );
