@@ -66,9 +66,9 @@ export default function Header(props) {
   if (logoCenter==="true"){
     marginRightValue = "41.3%";
   }
-  var brandComponent = <Button onClick={()=>history.push("/")} className={classes.title}>{hasNavbar?null:<img style={{height: '2.5em'}} src={image} />}</Button>;
+  var brandComponent = <Button href="/" className={classes.title}>{hasNavbar?null:<img style={{height: '2.5em'}} src={image} />}</Button>;
   if (fixedRight==="true"){
-    brandComponent = <Button onClick={()=>history.push("/")} className={classes.titleRight}>{hasNavbar?null:<img style={{height: '2.5em'}} src={image} />}</Button>;
+    brandComponent = <Button href="/" className={classes.titleRight}>{hasNavbar?null:<img style={{height: '2.5em'}} src={image} />}</Button>;
   }
   
   return (
