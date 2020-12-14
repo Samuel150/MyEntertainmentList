@@ -100,7 +100,7 @@ export default function NewsList(props) {
                   <img src = {image2} className={classes.imgRounded} border="10" height="250" width="250" ></img>
                 </GridItem>
                 <GridItem xs={12} sm={9}>
-                  <h3 className={classes.title}>That Time I Got Reincarnated as a Slime y Kami-tachi ni Hirowareta Otoko colaboran en un corto de anime</h3>
+                <Link to={"/newsDesc"}><h3 className={classes.title}>That Time I Got Reincarnated as a Slime y Kami-tachi ni Hirowareta Otoko colaboran en un corto de anime</h3></Link>
 
                   <Quote
                    text=""
