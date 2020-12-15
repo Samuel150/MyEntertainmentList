@@ -52,7 +52,7 @@ const profilePageStyle = {
   rightlist: {
     fontSize: "1.113rem",
     float: "right",
-    margin: "0px 40px 15px 15px",
+    margin: "0px 60px 15px 15px",
     color: "#000000"
   },
   titleProf: {
