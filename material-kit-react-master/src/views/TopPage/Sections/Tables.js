@@ -116,13 +116,13 @@ export default function SectionPills() {
   var items = [];
   for (var i = 0; i<resultados.length; i++){
     items.push(
-      <GridItem xs={12} sm={12} md={12} lg={12}>
+      <GridItem xs={10} sm={4} md={4} lg={4}>
         <div className={classes.container}>
         <h4 style={{textAlign: "center"}}>{resultados[i].title}</h4>
         <p style={{textAlign: "center", fontSize: "11px"}}>Estudio: {resultados[i].studios} | Espisodios {resultados[i].episodes} | Tipo: {resultados[i].tipo}</p>
         <img
           src={resultados[i].image}
-          alt=""
+          height="60%" width="20%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid}
         />
         <p align="justify">{resultados[i].description}</p>
@@ -235,7 +235,7 @@ export default function SectionPills() {
                   {
                     tabButton: "Mas Popular",
                     tabContent: (
-                      <GridContainer>
+                      <GridContainer spacing={4}>
                           {items}
                       </GridContainer>
                     )
