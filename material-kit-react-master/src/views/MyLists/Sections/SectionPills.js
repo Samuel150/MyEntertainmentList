@@ -30,15 +30,59 @@ import image1 from "assets/img/portFMA.jpg";
 import image2 from "assets/img/portGL.jpg";
 import image3 from "assets/img/portSNK.jpg";
 import image4 from "assets/img/portOP.jpg";
-
+import image5 from "assets/img/portSG.jpg";
+import image6 from "assets/img/portGin.jpg";
+import image7 from "assets/img/portCB.jpg";
+import image8 from "assets/img/portHI.jpg";
+import image9 from "assets/img/portVS.jpg";
+import image10 from "assets/img/portKS.jpg";
+import image11 from "assets/img/portGH.jpg";
+import image12 from "assets/img/portCG.jpg";
 function createData(number, image, titulo, puntaje, progreso) {
   return { number, image, titulo, puntaje, progreso };
 }
 const rows = [
   createData(1, image1, "Full Metal Alchemist", 10, 64),
   createData(2, image2, "Tengen Toppa Gurren Lagann", 10, 27),
-  createData(3, image3, "Shingeki no kyojin", 9, 20),
-  createData(4, image4, "One piece", 9, 925),
+  createData(3, image7, "Cowboy Bebop", 10, 26),
+  createData(4, image3, "Shingeki no kyojin", 9, 20),
+  createData(5, image4, "One piece", 9, 925),
+  createData(6, image5, "Steins;Gate", 9, 21),
+  createData(7, image6, "Gintama", 9, 215),
+  createData(8, image8, "Hajime no Ippo", 9, 75),
+  createData(9, image9, "Vinland Saga", 8, 22),
+  createData(10, image10, "Kaguya-sama wa Kokurasetai?", 8, 11),
+  createData(11, image11, "The God of High School", 5, 4),
+  createData(12, image12, "Code Geass", "-", "-"),
+
+];
+
+const rowsC = [
+  createData(1, image1, "Full Metal Alchemist", 10, 64),
+  createData(2, image2, "Tengen Toppa Gurren Lagann", 10, 27),
+  createData(3, image7, "Cowboy Bebop", 10, 26),
+  createData(4, image3, "Shingeki no kyojin", 9, 20),
+  createData(5, image5, "Steins;Gate", 9, 21),
+  createData(6, image8, "Hajime no Ippo", 9, 75),
+  createData(7, image10, "Kaguya-sama wa Kokurasetai?", 8, 11),
+
+];
+const rowsM = [
+  createData(1, image4, "One piece", 9, 925),
+  createData(2, image6, "Gintama", 9, 215),
+  createData(3, image9, "Vinland Saga", 8, 22),
+
+];
+const rowsD = [
+  createData(1, image11, "The God of High School", 5, 4),
+
+];
+const rowsP = [
+  createData(1, image12, "Code Geass", "-", "-"),
+
+];
+const rowsE = [
+  
 
 ];
 
@@ -105,7 +149,7 @@ export default function SectionPills() {
                           </TableRow>
                         </TableHead>
                         <TableBody>
-                          {rows.map((row) => (
+                          {rowsM.map((row) => (
                             <TableRow key={row.number}>
                               <TableCell component="th" scope="row">
                                 {row.number}
@@ -136,7 +180,7 @@ export default function SectionPills() {
                           </TableRow>
                         </TableHead>
                         <TableBody>
-                          {rows.map((row) => (
+                          {rowsC.map((row) => (
                             <TableRow key={row.number}>
                               <TableCell component="th" scope="row">
                                 {row.number}
@@ -167,7 +211,7 @@ export default function SectionPills() {
                           </TableRow>
                         </TableHead>
                         <TableBody>
-                          {rows.map((row) => (
+                          {rowsD.map((row) => (
                             <TableRow key={row.number}>
                               <TableCell component="th" scope="row">
                                 {row.number}
@@ -198,7 +242,7 @@ export default function SectionPills() {
                           </TableRow>
                         </TableHead>
                         <TableBody>
-                          {rows.map((row) => (
+                          {rowsE.map((row) => (
                             <TableRow key={row.number}>
                               <TableCell component="th" scope="row">
                                 {row.number}
@@ -229,7 +273,7 @@ export default function SectionPills() {
                           </TableRow>
                         </TableHead>
                         <TableBody>
-                          {rows.map((row) => (
+                          {rowsP.map((row) => (
                             <TableRow key={row.number}>
                               <TableCell component="th" scope="row">
                                 {row.number}
