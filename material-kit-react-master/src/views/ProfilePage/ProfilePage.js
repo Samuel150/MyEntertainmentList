@@ -56,41 +56,41 @@ export default function ProfilePage(props) {
                   <div className={classes.name}>
                     <h3 className={classes.title}>Samuel Huanca</h3>
                   </div>
-                    <Button color="orange" href="mylists"><h4 className={classes.buttonText}>My Anime List</h4></Button>
+                    <Button color="orange" href="mylists"><h4 className={classes.buttonText}>Mi Lista Anime</h4></Button>
                     
                 </div>
               </GridItem>
                 <GridItem xs={12} sm={12} md={8}>
-                    <h2 className={classes.titleProf}>Anime Stats</h2>
+                    <h2 className={classes.titleProf}>Estadísticas de visualización</h2>
                     <hr></hr>
                     <div >
-                    <h3 className={classes.leftcap}>Days: &nbsp;37.1</h3>
-                    <h3 className={classes.rightcap}> Mean Score: &nbsp;7.66 </h3>
+                    <h3 className={classes.leftcap}>Días:&nbsp;37.1</h3>
+                    <h3 className={classes.rightcap}> Promedio:&nbsp;7.6/10 </h3>
                     <br></br>
                     <br></br>
                     <br></br>
                     
                     <GridContainer justify="right">
                       <GridItem xs={12} sm={12} md={12}>
-                      <h3 className={classes.leftlist}><Done/> &nbsp;Watched Anime</h3>
+                      <h3 className={classes.leftlist}><Done/> &nbsp;Anime Vistos</h3>
                       <h3 className={classes.rightlist}>45</h3>
                       </GridItem>
                     </GridContainer>
                     <GridContainer justify="left">
                       <GridItem xs={12} sm={12} md={12}>
-                      <h3 className={classes.leftlist}><Favorite/> &nbsp;Favorite Anime</h3>
+                      <h3 className={classes.leftlist}><Favorite/> &nbsp;Anime Favoritos</h3>
                       <h3 className={classes.rightlist}>2</h3>
                       </GridItem>
                     </GridContainer>
                     <GridContainer justify="left">
                       <GridItem xs={12} sm={12} md={12}>
-                      <h3 className={classes.leftlist}><Alarm/> &nbsp;Plan to watch Anime</h3>
+                      <h3 className={classes.leftlist}><Alarm/> &nbsp;Planeo de ver</h3>
                       <h3 className={classes.rightlist}>3</h3>
                       </GridItem>
                     </GridContainer>
                     <GridContainer justify="left">
                       <GridItem xs={12} sm={12} md={12}>
-                      <h3 className={classes.leftlist}><Visibility/> &nbsp;Watching Anime</h3>
+                      <h3 className={classes.leftlist}><Visibility/> &nbsp;Estoy Viendo</h3>
                       <h3 className={classes.rightlist}>2</h3>
                       </GridItem>
                     </GridContainer>
@@ -107,7 +107,7 @@ export default function ProfilePage(props) {
                   color="orange"
                   tabs={[
                     {
-                      tabButton: "Watching",
+                      tabButton: "Estoy Viendo",
                       tabIcon: Visibility,
                       tabContent: (
                         <GridContainer justify="left">
@@ -121,7 +121,7 @@ export default function ProfilePage(props) {
                             />
                             <CardBody>
                               <h4 className={classes.cardTitle}>The Promised Neverland &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
-                              <p>Set in the year 2045, Emma is an 11-year-old orphan living in Grace Field House</p>
+                              <p>Ambientada en el año 2045, Emma es una huérfana de 11 años que vive en Grace Field House.</p>
                               
                             </CardBody>
                           </Card>
@@ -138,7 +138,7 @@ export default function ProfilePage(props) {
                             />
                             <CardBody>
                               <h4 className={classes.cardTitle}>Fate Zero &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
-                              <p>The story of Fate/Zero takes place ten years prior to the events of Fate/stay night, detailing the events of the Fourth Holy Grail War in Fuyuki City</p>
+                              <p>La historia de Fate / Zero tiene lugar diez años antes de los eventos de Fate / stay night, detallando los eventos de la Cuarta Guerra del Santo Grial en la ciudad de Fuyuki.</p>
                               
                             </CardBody>
                           </Card>
@@ -153,7 +153,7 @@ export default function ProfilePage(props) {
                             />
                             <CardBody>
                               <h4 className={classes.cardTitle}>Japan Sinks &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
-                              <p>An original net animation (ONA) anime series adaptation of the novel Japan Sinks</p>
+                              <p>Una adaptación de la serie de anime net animation (ONA) original de la novela Japan Sinks</p>
                               
                             </CardBody>
                           </Card>
@@ -162,7 +162,7 @@ export default function ProfilePage(props) {
                       )
                     },
                     {
-                      tabButton: "Plan to watch",
+                      tabButton: "Planeo de Ver",
                       tabIcon: Alarm,
                       tabContent: (
                         <GridContainer justify="left">
@@ -177,7 +177,7 @@ export default function ProfilePage(props) {
                             />
                             <CardBody>
                               <h4 className={classes.cardTitle}>Japan Sinks &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
-                              <p>An original net animation (ONA) anime series adaptation of the novel Japan Sinks</p>
+                              <p>Una adaptación de la serie de anime net animation (ONA) original de la novela Japan Sinks</p>
                               
                             </CardBody>
                           </Card>
@@ -186,7 +186,7 @@ export default function ProfilePage(props) {
                       )
                     },
                     {
-                      tabButton: "Favorites",
+                      tabButton: "Favoritos",
                       tabIcon: Favorite,
                       tabContent: (
                         <GridContainer justify="left">
@@ -200,7 +200,7 @@ export default function ProfilePage(props) {
                             />
                             <CardBody>
                               <h4 className={classes.cardTitle}>The Promised Neverland &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
-                              <p>Set in the year 2045, Emma is an 11-year-old orphan living in Grace Field House</p>
+                              <p>Ambientada en el año 2045, Emma es una huérfana de 11 años que vive en Grace Field House.</p>
                               
                             </CardBody>
                           </Card>
@@ -217,7 +217,7 @@ export default function ProfilePage(props) {
                             />
                             <CardBody>
                               <h4 className={classes.cardTitle}>Fate Zero &emsp; <BlockRounded style={{color: "#D76437" }}/></h4>
-                              <p>The story of Fate/Zero takes place ten years prior to the events of Fate/stay night, detailing the events of the Fourth Holy Grail War in Fuyuki City</p>
+                              <p>La historia de Fate / Zero tiene lugar diez años antes de los eventos de Fate / stay night, detallando los eventos de la Cuarta Guerra del Santo Grial en la ciudad de Fuyuki.</p>
                               
                             </CardBody>
                           </Card>

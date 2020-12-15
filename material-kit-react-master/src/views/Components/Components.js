@@ -101,8 +101,8 @@ export default function Components(props) {
           className={classes.imgRounded + " " + classes.imgFluid} />
               <Link to={"/login-page"} className={classes.link}>
               <div className="slick-caption">
-                <h3 className={classes.leftcap}> Fate Zero </h3>
-                <h3 className={classes.rightcap}> 10 </h3>
+                <h3 className={classes.leftcap}> Full Metal Alchemist </h3>
+                <h3 className={classes.rightcap}> 9.22 </h3>
               </div>
               </Link>
               </div>
@@ -113,8 +113,8 @@ export default function Components(props) {
           className={classes.imgRounded + " " + classes.imgFluid}/>
               <Link to={"/login-page"} className={classes.link}>
               <div className="slick-caption">
-                <h3 className={classes.leftcap}>Japan Sinks </h3>
-                <h3 className={classes.rightcap}> 10 </h3>
+                <h3 className={classes.leftcap}>Tengen Toppa</h3>
+                <h3 className={classes.rightcap}> 8.68 </h3>
               </div>
               </Link>
               </div>
@@ -125,8 +125,8 @@ export default function Components(props) {
           className={classes.imgRounded + " " + classes.imgFluid}/>
               <Link to={"/login-page"} className={classes.link}>
               <div className="slick-caption">
-                <h3 className={classes.leftcap}> The Promised Neverland </h3>
-                <h3 className={classes.rightcap}> 10 </h3>
+                <h3 className={classes.leftcap}> Attack on Titan </h3>
+                <h3 className={classes.rightcap}> 9.06 </h3>
               </div>
               </Link>
               </div>
@@ -137,8 +137,8 @@ export default function Components(props) {
           className={classes.imgRounded + " " + classes.imgFluid}/>
               <Link to={"/login-page"} className={classes.link}>
               <div className="slick-caption">
-                <h3 className={classes.leftcap}> Fate Zero </h3>
-                <h3 className={classes.rightcap}> 10 </h3>
+                <h3 className={classes.leftcap}> One Piece </h3>
+                <h3 className={classes.rightcap}> 8.50 </h3>
               </div>
               </Link>
               </div>
@@ -167,8 +167,8 @@ export default function Components(props) {
           className={classes.imgRounded + " " + classes.imgFluid} />
               <Link to={"/login-page"} className={classes.link}>
               <div className="slick-caption">
-                <h3 className={classes.leftcap}> Fate Zero </h3>
-                <h3 className={classes.rightcap}> 10 </h3>
+                <h3 className={classes.leftcap}> Full Metal Alchemist </h3>
+                <h3 className={classes.rightcap}> 9.22 </h3>
               </div>
               </Link>
               </div>
@@ -179,8 +179,8 @@ export default function Components(props) {
           className={classes.imgRounded + " " + classes.imgFluid}/>
               <Link to={"/login-page"} className={classes.link}>
               <div className="slick-caption">
-                <h3 className={classes.leftcap}>Japan Sinks </h3>
-                <h3 className={classes.rightcap}> 10 </h3>
+                <h3 className={classes.leftcap}>Tengen Toppa</h3>
+                <h3 className={classes.rightcap}> 8.68 </h3>
               </div>
               </Link>
               </div>
@@ -191,8 +191,8 @@ export default function Components(props) {
           className={classes.imgRounded + " " + classes.imgFluid}/>
               <Link to={"/login-page"} className={classes.link}>
               <div className="slick-caption">
-                <h3 className={classes.leftcap}> The Promised Neverland </h3>
-                <h3 className={classes.rightcap}> 10 </h3>
+                <h3 className={classes.leftcap}> Attack on Titan </h3>
+                <h3 className={classes.rightcap}> 9.06 </h3>
               </div>
               </Link>
               </div>
@@ -203,8 +203,8 @@ export default function Components(props) {
           className={classes.imgRounded + " " + classes.imgFluid}/>
               <Link to={"/login-page"} className={classes.link}>
               <div className="slick-caption">
-                <h3 className={classes.leftcap}> Fate Zero </h3>
-                <h3 className={classes.rightcap}> 10 </h3>
+                <h3 className={classes.leftcap}> One Piece </h3>
+                <h3 className={classes.rightcap}> 8.50 </h3>
               </div>
               </Link>
               </div>
