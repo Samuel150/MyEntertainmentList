@@ -64,8 +64,8 @@ export default function ProfilePage(props) {
                     <h2 className={classes.titleProf}>Estadísticas de visualización</h2>
                     <hr></hr>
                     <div >
-                    <h3 className={classes.leftcap}>Días: &nbsp;37.1</h3>
-                    <h3 className={classes.rightcap}> Puntaje Medio: &nbsp;7.66 </h3>
+                    <h3 className={classes.leftcap}>Días:&nbsp;37.1</h3>
+                    <h3 className={classes.rightcap}> Promedio:&nbsp;7.6/10 </h3>
                     <br></br>
                     <br></br>
                     <br></br>
