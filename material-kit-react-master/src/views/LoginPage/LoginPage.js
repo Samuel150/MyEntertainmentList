@@ -39,25 +39,28 @@ export default function LoginPage(props) {
   }, 700);
   const classes = useStyles();
   const classesCheckbox = useStylesCheckbox();
-  //const { ...rest } = props;
   return (
-    <div >
-      <Header
-        absolute
-        color="transparent"
-        logo="true"
-        hasNavbar="false"
-      />
       <div
         className={classes.pageHeader}
         style={{
           backgroundImage: "url(" + image + ")",
           backgroundSize: "cover",
-          backgroundPosition: "top center"
+          backgroundPosition: "top center",
+          marginBottom: "0px"
         }}
       >
-        <div className={classes.container} >
-          <GridContainer justify="flex-end" style={{marginTop: "5vw"}}>
+        <div className={classes.container} style={{paddingTop: "5vh"}}>
+          <GridContainer justify="center" direction="column" alignItems="flex-end">
+            <GridItem xs={9} sm={9} md={4} >
+              <div >
+              <img
+                src={"./logoMALPNG.png"}
+                alt=""
+                width="70%"
+                className={classes.imgRounded + " " + classes.imgFluid}
+              />
+              </div>
+            </GridItem>
             <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
@@ -100,21 +103,6 @@ export default function LoginPage(props) {
                   </CardHeader>
                   <p className={classes.divider}>O de manera clásica</p>
                   <CardBody>
-                    {/* <CustomInput
-                      labelText="Nombres..."
-                      id="first"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    /> */}
                     <CustomInput
                       labelText="Email..."
                       id="email"
@@ -182,8 +170,6 @@ export default function LoginPage(props) {
             </GridItem>
           </GridContainer>
         </div>
-        {/* <Footer whiteFont /> */}
       </div>
-    </div>
   );
 }

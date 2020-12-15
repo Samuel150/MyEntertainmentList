@@ -36,14 +36,14 @@ export default function LoginPage(props) {
   //const { ...rest } = props;
   return (
     <div>
-    <Header
+    {/* <Header
         absolute
         fixedRight="false"
         color="transparent"
         logo="true" 
         logoCenter="true"
         hasNavbar="false"
-      />
+      /> */}
       <div
         className={classes.pageHeader}
         style={{
@@ -52,8 +52,16 @@ export default function LoginPage(props) {
           backgroundPosition: "top center"
         }}
       >
-        <div className={classes.container}>
-          <GridContainer justify="center" style={{marginTop: "5vw"}}>
+        <div className={classes.container} style={{paddingTop: "1vh"}}>
+          <GridContainer justify="center" direction="column" alignItems="center" style={{marginTop: "5vw"}}>
+          <GridItem xs={6} sm={5} md={3} >
+              <img
+                src={"./logoMALPNG.png"}
+                alt=""
+                width="100%"
+                className={classes.imgRounded + " " + classes.imgFluid}
+              />
+            </GridItem>
             <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
