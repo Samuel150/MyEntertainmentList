@@ -30,6 +30,36 @@ import picture from "assets/img/fullmetalalchemist.png"
 import NavPills from "components/NavPills/NavPills.js";
 import TemplatePage from "views/TemplatePage";
 
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
+
+function createData(number, titulo, emision) {
+  return { number, titulo, emision };
+}
+const rows = [
+  createData(1,"Full Metal Alchemist", "5 Abril 2009"),
+  createData(2,"El dia del inicio", "12 Abril 2009"),
+  createData(3,"La ciudad de la herejía",  "19 Abril 2009"),
+  createData(4,"La angustia de un Alquimista",  "26 Abril 2009"),
+  createData(5,"Lluvia de tristeza", "2 Mayo 2009"),
+  createData(6,"El camino hacia la esperanza", "10 Mayo 2009"),
+  createData(7,"La verdad oculta", "17 Mayo 2009"),
+  createData(8,"Investigando el Laboratorio número 5", "24 Mayo 2009"),
+  createData(9,"Sentimientos creados", "31 Mayo 2009"),
+  createData(10,"Cada destino", "7 Junio 2009"),
+  createData(11,"Milagro en Rush Valley", "14 Junio 2009"),
+  createData(12,"Uno es todo, y todo es uno", "21 Junio 2009"),
+  createData(13,"Las bestias de Dublith", "28 Junio 2009"),
+  createData(14,"Aquellos que acechan bajo la tierra", "5 Julio 2009")
+  
+];
+
 
 const useStyles = makeStyles(styles);
 
@@ -60,8 +90,8 @@ export default function MyLists(props) {
                 <br></br>
             <h1 className={classes.title}>Full-Metal Alchemist: Brotherhood</h1>
             <br></br>
-            <GridContainer justify="left">
-                <GridItem xs={12} sm={12} md={4}>
+            <GridContainer justify="left" spacing={2}>
+                <GridItem xs={12} sm={4} md={4}>
                 <div className={classes.profile}>
                     <Card style={{width: "20rem"}}>
                             <img
@@ -75,48 +105,87 @@ export default function MyLists(props) {
                               <p><b>English: </b>Fullmetal Alchemist: Brotherhood</p>
                               <p><b>Japanese: </b>鋼の錬金術師 FULLMETAL ALCHEMIST</p>
                               <br></br>
-                              <h4 className={classes.cardTitle}><b>Informacion</b> &emsp;</h4>
-                              <p><b>Tipo: </b>TV</p>
-                              <p><b>Episodios: </b>64</p>
-                              <p><b>Estado: </b>Emision terminada</p>
-                              <p><b>Emision: </b>Apr 5, 2009 - Jul 4, 2010</p>
-                              <p><b>Productores: </b>Aniplex, Square Enix, Mainichi Broadcasting System, Studio Moriken</p>
-                              <p><b>Generos: </b>Accion, Militar, Aventura, Comedia, Drama, Magia, Fantasia, Shounen</p>
-                              <p><b>Licencias: </b>Funimation, Aniplex of America</p>
                               
                             </CardBody>
                           </Card>
+                          <div align="center">
+                          <Button color="orange" href="mylists">Añadir a mi lista</Button>
+                          </div>
                 </div>
                 </GridItem>
-                <GridItem xs={8} sm={8} md={8}>
+                <GridItem xs={12} sm={8} md={8} className={classes.navWrapper}>
                 <GridContainer justify="left">
               <GridItem xs={12} sm={12} md={12} className={classes.navWrapper}>
                 <NavPills
                   alignCenter
-                  color="orange"
+                  color="orange"  
                   tabs={[
                     {
                       tabButton: "Detalles",
                       tabContent: (
                           <div>
+                            <h3 align="center"><b>Score:</b> 9.21 &nbsp; <b>Rank:</b> #1 &nbsp; <b>Popularity: </b> #4</h3>
+                            <hr
+                                style={{
+                                    color: "black",
+                                    backgroundColor: "black",
+                                    height: 1
+                                }}
+                            />
+                            <h4 className={classes.cardTitle}><b>Informacion</b> &emsp;</h4>
+                              <p><b>Tipo: </b>&nbsp;&nbsp;TV</p>
+                              <p><b>Episodios: </b>&nbsp;&nbsp;64</p>
+                              <p><b>Estado: </b>&nbsp;&nbsp;Emision terminada</p>
+                              <p><b>Emision: </b>&nbsp;&nbsp;Apr 5, 2009 - Jul 4, 2010</p>
+                              <p><b>Productores: </b>&nbsp;&nbsp;Aniplex, Square Enix, Mainichi Broadcasting System, Studio Moriken</p>
+                              <p><b>Generos: </b>&nbsp;&nbsp;Accion, Militar, Aventura, Comedia, Drama, Magia, Fantasia, Shounen</p>
+                              <p><b>Licencias: </b>&nbsp;&nbsp;Funimation, Aniplex of America</p>
+
+                              <hr
+                                style={{
+                                    color: "black",
+                                    backgroundColor: "black",
+                                    height: 1
+                                }}
+                            />
                               <p><b>Synopsis</b></p>
-                                <br></br>
-                                <p>"In order for something to be obtained, something of equal value must be lost."
-
-Alchemy is bound by this Law of Equivalent Exchange—something the young brothers Edward and Alphonse Elric only realize after attempting human transmutation: the one forbidden act of alchemy. They pay a terrible price for their transgression—Edward loses his left leg, Alphonse his physical body. It is only by the desperate sacrifice of Edward's right arm that he is able to affix Alphonse's soul to a suit of armor. Devastated and alone, it is the hope that they would both eventually return to their original bodies that gives Edward the inspiration to obtain metal limbs called "automail" and become a state alchemist, the Fullmetal Alchemist.
-
-Three years of searching later, the brothers seek the Philosopher's Stone, a mythical relic that allows an alchemist to overcome the Law of Equivalent Exchange. Even with military allies Colonel Roy Mustang, Lieutenant Riza Hawkeye, and Lieutenant Colonel Maes Hughes on their side, the brothers find themselves caught up in a nationwide conspiracy that leads them not only to the true nature of the elusive Philosopher's Stone, but their country's murky history as well. In between finding a serial killer and racing against time, Edward and Alphonse must ask themselves if what they are doing will make them human again... or take away their humanity.</p>
+                            <p align="justify">Fullmetal Alchemist trata sobre Edward y Alphonse Elric, dos hermanos que viven en el país de Amestris, un estado militarizado por completo (el jefe del estado es el jefe del ejército), en un mundo donde la alquimia es algo cotidiano, dándole un trasfondo fantástico a la obra. Por otro lado, existe también la tecnología de los implantes automails, por lo general brazos y piernas, que sustituyen miembros perdidos, que otorgan un toque de ciencia ficción. Estos dos hechos son relevantes, ya que ambos hermanos son alquimistas, pero además, Ed tiene automails en sustitución de su brazo derecho y su pierna izquierda. </p>
+                            <p align="justify">Al es sólo un alma vinculada mediante alquimia a una armadura. Este es el castigo que ambos hermanos sufrieron al tratar de resucitar a su madre mediante la alquimia. Este es eje central sobre el que se desarrolla la obra: el cómo ambos hermanos tratan de recuperar sus cuerpos, buscando para ello la mítica piedra filosofal. A medida que avance la obra, conocerán a gente con intereses similares, algunos amigos, pero sobre todo enemigos, y surgirán muchísimos problemas.</p>
                           </div>
                       )
                     },
                     {
                       tabButton: "Episodios",
                       tabContent: (
-                        <p></p>
+                        <TableContainer component={Paper}>
+                      <Table className={classes.table} size="big" aria-label="a dense table" stickyHeader aria-label="sticky table">
+                        <TableHead>
+                          <TableRow>
+                            <TableCell>#</TableCell>
+                            <TableCell align="center">Titulo</TableCell>
+                            <TableCell align="center">Emision</TableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {rows.map((row) => (
+                            <TableRow key={row.number}>
+                              <TableCell >
+                                {row.number}
+                              </TableCell>
+                              <TableCell align="center"> {row.titulo} </TableCell>
+                              <TableCell align="center">{row.emision}</TableCell>
+                            </TableRow>
+                          ))}
+                          <TableRow>
+                            <TableCell></TableCell>
+                          </TableRow>
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
                       )
                     },
                     {
-                      tabButton: "Reviews",
+                      tabButton: "Foro",
                       tabContent: (
                         <p></p>
                       )
@@ -125,7 +194,7 @@ Three years of searching later, the brothers seek the Philosopher's Stone, a myt
                 />
               </GridItem>
             </GridContainer>
-                </GridItem> 
+            </GridItem>
             </GridContainer>
           
           </div>

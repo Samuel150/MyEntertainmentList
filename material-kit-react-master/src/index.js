@@ -17,8 +17,9 @@ import SignUpPage from "views/SignUpPage/SignUpPage.js";
 import SearchResults from "views/SearchResults/SearchResults"
 import NotFoundPage from "views/NotFoundPage/NotFoundPage.js";
 import TopPage from "views/TopPage/TopPage.js";
-import FavoritesPage from "views/VisualizarPage/FavoritesPage.js";
+import FavoritesPage from "views/FavoritesPage/FavoritesPage.js";
 import DescriptionPage from "views/DescriptionPage/DescriptionPage.js";
+import AboutPage from "views/AboutPage/AboutPage.js";
 
 
 var hist = createBrowserHistory();
@@ -35,7 +36,7 @@ ReactDOM.render(
       <Route path="/newsDesc" component={NewsDesc} />
       <Route path="/searchResults" component={SearchResults} />
       <Route path="/about" component={AboutPage} />
-      <Route path="/top" component={TopPage} />
+      <Route path="/topAnime" component={TopPage} />
       <Route path="/favorites" component={FavoritesPage} />
       <Route path="/description" component={DescriptionPage} />
       <Route exact path="/" component={Components} />

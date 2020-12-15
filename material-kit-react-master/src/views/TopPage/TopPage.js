@@ -48,7 +48,7 @@ export default function MyLists(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bganime6.jpg")}>
+      <Parallax image={require("assets/img/bganime23.jpg")}>
         <div className={classes.container}>
           <GridContainer >
             <GridItem>
@@ -62,7 +62,7 @@ export default function MyLists(props) {
         </div>
       </Parallax>
 
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      <div style={{textAlign: "center", marginRight: "5%"}} className={classNames(classes.main, classes.mainRaised)}>
         <Tables />
       </div>
       <Footer />
