@@ -217,7 +217,7 @@ export default function Components(props) {
 
 
           <div className={classes.container}>
-          <Link to={"/login-page"} className={classes.link}>
+          <Link to={"/newslist"} className={classes.link}>
               <h2 className={classes.titleCarousel}>Noticias más recientes</h2>
               <br></br>
           </Link>
