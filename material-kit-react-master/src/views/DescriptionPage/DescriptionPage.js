@@ -108,8 +108,9 @@ export default function MyLists(props) {
                               
                             </CardBody>
                           </Card>
-                          <div align="center">
-                          <Button color="orange" href="mylists">Añadir a mi lista</Button>
+                          <div align="left">
+                          <Button color="orange" BlockRounded href="mylists">Añadir a mi lista</Button>
+                          <Button color="orange" BlockRounded href="foro">Ver Foro</Button>
                           </div>
                 </div>
                 </GridItem>
@@ -182,12 +183,6 @@ export default function MyLists(props) {
                         </TableBody>
                       </Table>
                     </TableContainer>
-                      )
-                    },
-                    {
-                      tabButton: "Foro",
-                      tabContent: (
-                        <p></p>
                       )
                     }
                   ]}
