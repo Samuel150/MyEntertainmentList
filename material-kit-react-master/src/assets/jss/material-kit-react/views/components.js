@@ -1,4 +1,5 @@
 import { container } from "assets/jss/material-kit-react.js";
+import imagesStyle from "assets/jss/material-kit-react/imagesStyles.js";
 
 const componentsStyle = {
   container,
@@ -6,15 +7,33 @@ const componentsStyle = {
     color: "#FFFFFF",
     textAlign: "left"
   },
+  ...imagesStyle,
   title: {
     fontSize: "4.2rem",
     fontWeight: "600",
     display: "inline-block",
     position: "relative"
   },
+  title2: {
+    fontSize: "1.513rem",
+    display: "inline-block",
+    position: "relative",
+    marginTop: "30px",
+    minHeight: "32px",
+    color: "#000000",
+    textDecoration: "none"
+  },
+  title3: {
+    color: "#D78D37",
+  },
   subtitle: {
     fontSize: "1.313rem",
     maxWidth: "500px",
+    margin: "10px 0 0"
+  },
+  subtitle2: {
+    fontSize: "1.313rem",
+    color: "#000000",
     margin: "10px 0 0"
   },
   leftcap: {
@@ -30,8 +49,7 @@ const componentsStyle = {
     color: "#000000"
   },
   titleCarousel: {
-    fontSize: "4.013rem",
-    maxWidth: "500",
+    fontSize: "3.513rem",
     color: "#8A5A23"
   },
   main: {
