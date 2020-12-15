@@ -107,7 +107,7 @@ export default function ProfilePage(props) {
                   color="orange"
                   tabs={[
                     {
-                      tabButton: "Watching",
+                      tabButton: "Estoy Viendo",
                       tabIcon: Visibility,
                       tabContent: (
                         <GridContainer justify="left">
@@ -162,7 +162,7 @@ export default function ProfilePage(props) {
                       )
                     },
                     {
-                      tabButton: "Plan to watch",
+                      tabButton: "Planeo de Ver",
                       tabIcon: Alarm,
                       tabContent: (
                         <GridContainer justify="left">
@@ -186,7 +186,7 @@ export default function ProfilePage(props) {
                       )
                     },
                     {
-                      tabButton: "Favorites",
+                      tabButton: "Favoritos",
                       tabIcon: Favorite,
                       tabContent: (
                         <GridContainer justify="left">
