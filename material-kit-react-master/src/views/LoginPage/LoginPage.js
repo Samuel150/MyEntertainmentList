@@ -5,11 +5,6 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
-//import People from "@material-ui/icons/People";
-// core components
-import Header from "components/Header/Header.js";
-//import HeaderLinks from "components/Header/HeaderLinks.js";
-// Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -21,19 +16,32 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import {Link} from 'react-router-dom';
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from '@material-ui/core/FormControl';
 import Check from "@material-ui/icons/Check";
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
+import stylesCheckbox from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 
 import image from "assets/img/bganime36.jpg";
-
-import stylesCheckbox from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 
 const useStylesCheckbox = makeStyles(stylesCheckbox);
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   setTimeout(function() {
     setCardAnimation("");
   }, 700);
@@ -103,14 +111,16 @@ export default function LoginPage(props) {
                   </CardHeader>
                   <p className={classes.divider}>O de manera clásica</p>
                   <CardBody>
+                    
                     <CustomInput
-                      labelText="Email..."
+                      labelText="Correo"
                       id="email"
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         type: "email",
+                        color: "primaryColorAnime",
                         endAdornment: (
                           <InputAdornment position="end">
                             <Email className={classes.inputIconsColor} />
@@ -119,7 +129,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Password"
+                      labelText="Contraseña"
                       id="pass"
                       formControlProps={{
                         fullWidth: true
@@ -160,12 +170,40 @@ export default function LoginPage(props) {
                   
                   </CardFooter>
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
-                    <p>Olvidaste tu contraseña <Link style={{color: "#0022ff"}} to="/"> Recuperar Cuenta</Link></p>
+                    <p >Olvidaste tu contraseña? <Link   onClick={handleClickOpen} style={{color: "#0022ff"}}>  Recuperar Cuenta</Link></p>
                   </div>
+
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
-                    <p>No tienes una cuenta <Link style={{color: "#0022ff"}} to="/signUp">Crear Cuenta</Link></p>
+                    <p>No tienes una cuenta? <Link style={{color: "#0022ff"}} to="/signUp">Crear Cuenta</Link></p>
                   </div>
                 </form>
+                <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                  <DialogTitle id="form-dialog-title">Recuperar Cuenta</DialogTitle>
+                  <DialogContent>
+                    <DialogContentText>
+                      Ingrese su email para enviarle un correo de recuperación de cuenta
+                    </DialogContentText>
+                    <CustomInput
+                      labelText="Email"
+                      id="email"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "email",
+                        color: "primaryColorAnime"
+                      }}
+                    />
+                  </DialogContent>
+                  <DialogActions>
+                    <Button onClick={handleClose} simple color="white">
+                      Cancelar
+                    </Button>
+                    <Button onClick={handleClose} simple color="white">
+                      Enviar
+                    </Button>
+                  </DialogActions>
+                </Dialog>
               </Card>
             </GridItem>
           </GridContainer>
