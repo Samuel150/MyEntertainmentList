@@ -110,7 +110,7 @@ export default function MyLists(props) {
                           </Card>
                           <div align="left">
                           <Button color="orange" BlockRounded href="mylists">Añadir a mi lista</Button>
-                          <Button color="orange" BlockRounded href="foro">Ver Foro</Button>
+                          <Button color="orange" BlockRounded href="/forums/o88e14t33a4m">Ver Foro</Button>
                           </div>
                 </div>
                 </GridItem>
