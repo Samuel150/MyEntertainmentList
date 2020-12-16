@@ -25,15 +25,15 @@ export default function JoinCommunitySection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>JOIN THE COMMUNITY</h2>
+          <h2 className={classes.title}>ÚNETE A LA COMUNIDAD</h2>
         </GridItem>
       </GridContainer>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
             <InfoArea
-              title="Which titles do you like?"
-              description="Our forums are the best place to discuss your favorite series and keep up to date with anime and manga news and trends."
+              title="¿Qué títulos te gustan?"
+              description="Nuestros foros son el mejor lugar para discutir tus series favoritas y mantenerte al día con las noticias y tendencias de anime y manga."
               icon={Forum}
               iconColor="warning"
               vertical
@@ -41,8 +41,8 @@ export default function JoinCommunitySection() {
           </GridItem>
           <GridItem xs={12} sm={12} md={6}>
             <InfoArea
-              title="Who else is online?"
-              description="Connect with millions of fans from over 200 countries worldwide in our active online community of over half a million users a day!"
+              title="¿Quiénes más estan en línea?"
+              description="¡Conéctate con millones de fanáticos de más de 200 países en todo el mundo en nuestra activa comunidad en línea de más de medio millón de usuarios al día!"
               icon={WifiTethering}
               iconColor="danger"
               vertical
@@ -54,10 +54,10 @@ export default function JoinCommunitySection() {
     <div className={classes.section}>
     <GridContainer justify="center">
       <GridItem xs={12} sm={12} md={8}>
-        <h2 className={classes.title}>Discover more about the world of anime and manga now!</h2>
+        <h2 className={classes.title}>¡Descubre más sobre el mundo del anime y el manga ahora!</h2>
       </GridItem>
       <GridItem xs={12} sm={12} md={6}>
-        <Button simple href="/signUp">Sign Up</Button>
+        <Button simple href="/signUp">Registrarme</Button>
       </GridItem>
     </GridContainer>
     <div>

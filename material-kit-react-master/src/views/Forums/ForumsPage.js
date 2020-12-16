@@ -31,7 +31,7 @@ export default function ForumsPage(props) {
           <GridContainer >
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>Forums</h1>
+                <h1 className={classes.title}>Foros</h1>
               </div>
             </GridItem>
           </GridContainer>

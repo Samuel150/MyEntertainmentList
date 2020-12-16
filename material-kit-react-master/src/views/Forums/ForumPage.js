@@ -25,6 +25,8 @@ import Quote from "components/Typography/Quote.js";
 import Muted from "components/Typography/Muted.js";
 import profile from "assets/img/faces/kendall.jpg";
 import profile2 from "assets/img/faces/marc.jpg";
+import profile3 from "assets/img/faces/christian.jpg";
+
 
 const useStyles = makeStyles(styles);
 
@@ -34,9 +36,11 @@ export default function ForumPage(props) {
     classes.imgRaised,
     classes.imgFluid
   );
+  const [textInput,setTextInput]= React.useState(false)
+
   return (
     <TemplatePage>
-      <Parallax small image={require("assets/img/bgforum.jpg")}>
+      <Parallax image={require("assets/img/bgforum.jpg")}>
         <div className={classes.container}>
           <GridContainer >
             <GridItem>
@@ -52,7 +56,7 @@ export default function ForumPage(props) {
       <GridContainer  justify="center" style={{marginBottom:"30px"}}>
         <GridContainer justify="right">
                 <GridItem xs={12} sm={3}style={{marginTop:'20px'}}>
-                <img style={{height: "10em"}} src={profile} alt="..." className={imageClasses} />
+                <img style={{height: "6em", width:'6em'}} src={profile} alt="..." className={imageClasses} />
                 </GridItem>
                 <GridItem xs={12} sm={9} style={{marginTop:'20px'}}>       
                   <Quote
@@ -68,7 +72,7 @@ export default function ForumPage(props) {
               </GridContainer>
               <GridContainer justify="right">
                 <GridItem xs={12} sm={3}style={{marginTop:'20px'}}>
-                <img style={{height: "10em"}} src={profile2} alt="..." className={imageClasses} />
+                <img style={{height: "6em", width:'6em'}} src={profile2} alt="..." className={imageClasses} />
                 </GridItem>
                 <GridItem xs={12} sm={9} style={{marginTop:'20px'}}>       
                   <Quote
@@ -82,12 +86,33 @@ export default function ForumPage(props) {
                   
                 </GridItem>
               </GridContainer>
+              {textInput?
+              <GridContainer justify="right">
+                               <GridItem xs={12} sm={3}style={{marginTop:'20px'}}>
+                <img style={{height: "6em", width:'6em'}} src={profile3} alt="..." className={imageClasses} />
+                </GridItem>
+              <GridItem xs={12} sm={9} style={{marginTop:'20px'}}>       
+                <Quote
+                 text=""
+                 author="Autor: Samuel Huanca, ahora"
+                 
+               />
+               <Muted>
+               Cuando los hermanos Elric ayudaron a los Hughes cuando nació Alicia, eso sucedió casi al mismo tiempo cuando Edward se convirtió en un alquimista estatal. Si lo sé bien, tenía 12 años en ese momento. Fue en el episodio 6.
+
+La mayoría de los siguientes episodios (incidente de Barry, la Quimera, etc.) parece cubrir un tiempo relativamente corto. Sin embargo, más tarde se mencionó que Ed tiene 14-15 años. Y también, estoy absolutamente seguro de que era cierto en el momento en que Hughes fue asesinado.
+               </Muted>                  
+              </GridItem>
+            </GridContainer>
+              :null
+              }
               <div style={{display:'flex', width: '100%'}}>
-                <div style={{marginLeft:'auto'}}>
-                  <div style={{marginBottom:'20px'}}>
+                <div style={{display:'flex', flexDirection:'column',marginLeft:'auto'}}>
+                  <div style={{display:'flex', marginBottom:'20px'}}>
+                <img style={{height: "3em", width:'3em', marginRight:'10px'}} src={profile3} alt="..." className={imageClasses} />
                     <CustomInput labelText="Respuesta"/>
                   </div>
-                  <Button simple >Publicar</Button>
+                  <Button simple onClick={()=>setTextInput(!textInput)}>Publicar</Button>
                 </div>
               </div>
       </GridContainer>

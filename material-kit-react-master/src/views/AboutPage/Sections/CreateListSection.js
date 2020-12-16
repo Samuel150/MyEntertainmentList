@@ -20,15 +20,15 @@ export default function CreateListSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>CREATE YOUR LIST</h2>
+          <h2 className={classes.title}>CREA TU LISTA</h2>
         </GridItem>
       </GridContainer>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={6}>
             <InfoArea
-              title="What have you watched?"
-              description="Create your personalized list from tens of thousands of titles on the world’s largest anime and manga database."
+              title="¿Qué has visto?"
+              description="Crea tu lista personalizada a partir de decenas de miles de títulos en la base de datos de anime y manga más grande del mundo."
               icon={FormatListBulleted}
               iconColor="info"
               vertical
@@ -36,8 +36,8 @@ export default function CreateListSection() {
           </GridItem>
           <GridItem xs={12} sm={12} md={6}>
             <InfoArea
-              title="Need to stay up to date?"
-              description="Use your list to organize and track what titles you’ve completed, your current progress, what you plan to watch or read and so much more."
+              title="¿Necesitas estar al día?"
+              description="Utiliza tu lista para organizar y realizar un seguimiento de los títulos que has completado, tu progreso actual, lo que planeas ver o leer y mucho más."
               icon={EventAvailable}
               iconColor="success"
               vertical

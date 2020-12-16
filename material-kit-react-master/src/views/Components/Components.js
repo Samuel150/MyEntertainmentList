@@ -61,7 +61,7 @@ export default function Components(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>My Anime List</h1>
                 <h3 className={classes.subtitle}>
-                  The world's largest anime and manga database and community
+                La base de datos y la comunidad de anime y manga más grande del mundo
                 </h3>
               </div>
             </GridItem>

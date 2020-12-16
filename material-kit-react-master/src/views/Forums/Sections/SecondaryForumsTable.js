@@ -86,7 +86,7 @@ export default function SecondaryForumsTable(props) {
                     </TableContainer>
                     )
                   }, {
-                    tabButton: "Recent",
+                    tabButton: "Reciente",
                     tabContent: (
                       <TableContainer component={Paper}>
                       <Table className={classes.table} size="big" aria-label="a dense table" stickyHeader aria-label="sticky table">

@@ -35,18 +35,18 @@ import image4 from "assets/img/portOP.jpg";
 import Forum from "@material-ui/icons/Forum";
 
 const malRows = [
-  {icon: Forum, title:"Updates & Announcements",description:"Updates, changes, and additions to MAL."},
-  {icon: Forum, title:"FAQ",description:"Site rules, forum rules, database guidelines, review/recommendation guidelines, and other helpful information."},
-  {icon: Forum, title:"Support",description:"Have a problem using the site or think you found a bug? Post here."},
-  {icon: Forum, title:"Suggestions",description:"Have an idea or suggestion for the site? Share it here."},
-  {icon: Forum, title:"MAL Contests",description:"Our season-long anime game and other user competitions can be found here."}
+  {icon: Forum, title:"Actualizaciones y anuncios",description:"Actualizaciones, cambios y adiciones a MAL."},
+  {icon: Forum, title:"FAQ",description:"Reglas del sitio, reglas del foro, y otra información de ayuda."},
+  {icon: Forum, title:"Soporte",description:"Tienes algún problema usando el sitio o encontraste un bug? Publica aquí"},
+  {icon: Forum, title:"Sugerencias",description:"Tienes alguna idea o sugerencia para el sitio? Compártela aqui."},
+  {icon: Forum, title:"MAL Concursos",description:"Puedes encontrar nuestros concursos de temporada aqui."}
 ];
 
 const generalRows = [
-  {icon: Forum, title:"Introductions",description:"New to MyAnimeList? Introduce yourself here."},
-  {icon: Forum, title:"Games, Computers & Tech Support",description:"Discuss visual novels and other video games, or ask our community a computer related question."},
-  {icon: Forum, title:"Music & Entertainment",description:"Asian music and live-action series, Western media and artists, best-selling novels, etc."},
-  {icon: Forum, title:"Current Events",description:"World headlines, the latest in science, sports competitions, and other debate topics."},
+  {icon: Forum, title:"Presentaciones",description:"Nuevo en MyAnimeList? Preséntate aqui."},
+  {icon: Forum, title:"Juegos, Computadoras y Tecnología",description:"Discusión sobre novelas virales y otros videojuegos."},
+  {icon: Forum, title:"Musica y Entretenimiento",description:"Live-action series, novelas mejores vendidas, etc."},
+  {icon: Forum, title:"Eventos actuales",description:"Últimas noticias en diversos tópicos."},
   
 ]
 
