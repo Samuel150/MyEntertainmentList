@@ -36,7 +36,7 @@ export default function Footer(props) {
                 href="/"
                 className={classes.block}
               >
-                Home
+                Inicio
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -44,7 +44,7 @@ export default function Footer(props) {
                 href="/profile"
                 className={classes.block}
               >
-                Profile
+                Perfil
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -52,7 +52,7 @@ export default function Footer(props) {
                 href="/login"
                 className={classes.block}
               >
-                Login
+                Ingresar
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -60,7 +60,7 @@ export default function Footer(props) {
                 href="/signUp"
                 className={classes.block}
               >
-                Sign Up
+                Registrarse
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -68,7 +68,7 @@ export default function Footer(props) {
                 href="/about"
                 className={classes.block}
               >
-                About us
+                Acerca de
               </a>
             </ListItem>
           </List>

@@ -144,7 +144,6 @@ export default function SearchResults() {
         <FormControlLabel
           control={
           <Checkbox
-            
             tabIndex={-1}
             checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
             icon={<Check className={classesCheckbox.uncheckedIcon} />}
@@ -167,7 +166,6 @@ export default function SearchResults() {
         <FormControlLabel
           control={
           <Checkbox
-            
             tabIndex={-1}
             checkedIcon={<Check className={classesCheckbox.checkedIcon} />}
             icon={<Check className={classesCheckbox.uncheckedIcon} />}

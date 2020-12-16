@@ -9,9 +9,6 @@ import People from "@material-ui/icons/People";
 //import Person from "@material-ui/icons/Person";
 import PersonOutline from "@material-ui/icons/PersonOutline";
 // core components
-import Header from "components/Header/Header.js";
-//import HeaderLinks from "components/Header/HeaderLinks.js";
-//import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -29,6 +26,8 @@ const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
+  
+
   setTimeout(function() {
     setCardAnimation("");
   }, 700);
@@ -36,14 +35,14 @@ export default function LoginPage(props) {
   //const { ...rest } = props;
   return (
     <div>
-    <Header
+    {/* <Header
         absolute
         fixedRight="false"
         color="transparent"
         logo="true" 
         logoCenter="true"
         hasNavbar="false"
-      />
+      /> */}
       <div
         className={classes.pageHeader}
         style={{
@@ -52,8 +51,16 @@ export default function LoginPage(props) {
           backgroundPosition: "top center"
         }}
       >
-        <div className={classes.container}>
-          <GridContainer justify="center" style={{marginTop: "5vw"}}>
+        <div className={classes.container} style={{paddingTop: "1vh"}}>
+          <GridContainer justify="center" direction="column" alignItems="center" style={{marginTop: "5vw"}}>
+          <GridItem xs={6} sm={5} md={3} >
+              <img
+                src={"./logoMALPNG.png"}
+                alt=""
+                width="100%"
+                className={classes.imgRounded + " " + classes.imgFluid}
+              />
+            </GridItem>
             <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
@@ -93,7 +100,7 @@ export default function LoginPage(props) {
                   <p className={classes.divider}>O de manera clásica</p>
                   <CardBody>
                     <CustomInput
-                      labelText="Nombres..."
+                      labelText="Nombres"
                       id="first"
                       formControlProps={{
                         fullWidth: true
@@ -108,7 +115,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Apellidos..."
+                      labelText="Apellidos"
                       id="first"
                       formControlProps={{
                         fullWidth: true
@@ -123,7 +130,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Apodo..."
+                      labelText="Apodo"
                       id="first"
                       formControlProps={{
                         fullWidth: true
@@ -138,7 +145,7 @@ export default function LoginPage(props) {
                       }}
                     />
                     <CustomInput
-                      labelText="Correo..."
+                      labelText="Correo"
                       id="email"
                       formControlProps={{
                         fullWidth: true

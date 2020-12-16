@@ -36,7 +36,7 @@ export default function AboutPage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>My Anime List</h1>
               <h3>
-              The world's largest anime and manga database and community
+              La base de datos y la comunidad de anime y manga más grande del mundo
               </h3>
             </GridItem>
           </GridContainer>

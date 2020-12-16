@@ -8,6 +8,7 @@ import {
 } from "assets/jss/material-kit-react.js";
 
 const customCheckboxRadioSwitch = {
+  primaryColorAnime: primaryColorAnime,
   checkRoot: {
     padding: "12px",
     "&:hover": {

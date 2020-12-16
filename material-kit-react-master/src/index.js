@@ -20,6 +20,8 @@ import TopPage from "views/TopPage/TopPage.js";
 import FavoritesPage from "views/FavoritesPage/FavoritesPage.js";
 import DescriptionPage from "views/DescriptionPage/DescriptionPage.js";
 import AboutPage from "views/AboutPage/AboutPage.js";
+import ForumsPage from "views/Forums/ForumsPage.js";
+import ForumPage from "views/Forums/ForumPage.js";
 
 
 var hist = createBrowserHistory();
@@ -34,6 +36,8 @@ ReactDOM.render(
       <Route path="/login" component={LoginPage} />
       <Route path="/signUp" component={SignUpPage} />
       <Route path="/newsDesc" component={NewsDesc} />
+      <Route path="/forums/o88e14t33a4m" component={ForumPage} />
+      <Route path="/forums" component={ForumsPage} />
       <Route path="/searchResults" component={SearchResults} />
       <Route path="/about" component={AboutPage} />
       <Route path="/topAnime" component={TopPage} />
