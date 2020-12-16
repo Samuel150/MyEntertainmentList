@@ -30,9 +30,9 @@ import { Link } from "react-router-dom";
 import Forum from "@material-ui/icons/Forum";
 
 const malRows = [
-  {icon: Forum, title:"Fullmetal Alchemist: Periodo de tiempo",author:"Samuel Huanca",date:"2020/03/15",category:"Discusión de Anime",replies:1014},
+  {icon: Forum, title:"Fullmetal Alchemist: Periodo de tiempo",author:"Belén Uribe",date:"2020/03/15",category:"Discusión de Anime",replies:1014},
   {icon: Forum, title:"¿Cuál es su personaje favorito?",author:"Andres Mendez", date:"2019/08/11",category:"Favoritos",replies:824},
-  {icon: Forum, title:"Fullmetal Alchemist vs Fullmetal Alchemist:Brotherhood",author:"Koogmaster", date:"2020/10/05",category:"Discusión de Anime",replies:782},
+  {icon: Forum, title:"Fullmetal Alchemist vs Fullmetal Alchemist:Brotherhood",author:"Samuel Huanca", date:"2020/10/05",category:"Discusión de Anime",replies:782},
 ];
 
 const recentRows = [
@@ -68,7 +68,7 @@ export default function SecondaryForumsTable(props) {
                               </TableCell>
                               <TableCell  align="left">
                                 <div style={{display:"flex", flexDirection:"column"}}>
-                                  <Link style={{color:'#8A4023'}} to="/forum/o88e14t33a4m">{row.title}</Link>
+                                  <Link style={{color:'#8A4023'}} to="/forums/o88e14t33a4m">{row.title}</Link>
                                   <div style={{color:'gray'}}>{row.date}</div>
                                   <div style={{color:'gray'}}>en {row.category}</div>
                                 </div>
@@ -98,7 +98,7 @@ export default function SecondaryForumsTable(props) {
                               </TableCell>
                               <TableCell  align="left">
                                 <div style={{display:"flex", flexDirection:"column"}}>
-                                  <Link style={{color:'#8A4023'}} to="/forum/o88e14t33a4m">{row.title}</Link>
+                                  <Link style={{color:'#8A4023'}} to="/forums/o88e14t33a4m">{row.title}</Link>
                                   <div style={{color:'gray'}}>{row.date}</div>
                                   <div style={{color:'gray'}}>en {row.category}</div>
                                 </div>

@@ -77,7 +77,7 @@ export default function MainForumsTable(props) {
                               </TableCell>
                               <TableCell  align="left">
                                 <div style={{display:"flex", flexDirection:"column"}}>
-                                  <Link style={{color:'#8A4023'}} to="/forum/updates">{row.title}</Link>
+                                  <Link style={{color:'#8A4023'}} to="/forums">{row.title}</Link>
                                   <div style={{color:'gray'}}>{row.description}</div>
                                 </div>
                               </TableCell>
@@ -101,7 +101,7 @@ export default function MainForumsTable(props) {
                               </TableCell>
                               <TableCell  align="left">
                                 <div style={{display:"flex", flexDirection:"column"}}>
-                                  <Link style={{color:'#8A4023'}} to="/forum/updates">{row.title}</Link>
+                                  <Link style={{color:'#8A4023'}} to="/forums">{row.title}</Link>
                                   <div style={{color:'gray'}}>{row.description}</div>
                                 </div>
                               </TableCell>
