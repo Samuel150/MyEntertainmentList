@@ -43,7 +43,7 @@ export default function MyLists(props) {
           <GridContainer >
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>My Lists</h1>
+                <h1 className={classes.title}>Mis Listas</h1>
                 <h3 className={classes.subtitle}>
                 ¿Cuánto anime has visto?
                 </h3>

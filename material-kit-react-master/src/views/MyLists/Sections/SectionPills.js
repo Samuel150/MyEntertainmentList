@@ -1,7 +1,7 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import { Link } from "react-router-dom";
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Schedule from "@material-ui/icons/Schedule";
@@ -124,7 +124,7 @@ export default function SectionPills() {
                                 {row.number}
                               </TableCell>
                               <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
-                              <TableCell  align="left"> {row.titulo} </TableCell>
+                              <TableCell  align="left"><a style={{color: "black"}} href="description"> {row.titulo}</a> </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
                             </TableRow>
