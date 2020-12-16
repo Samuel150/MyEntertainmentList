@@ -72,7 +72,7 @@ export default function Components(props) {
         <div className={classes.container} >
           <GridContainer>
             <GridItem xs={12} sm={12} md={12} >
-            <Link to={"/login-page"} className={classes.link}>
+            <Link to={"/topAnime"} className={classes.link}>
               <h2 className={classes.titleCarousel}>Animes más populares</h2>
               <h3 className={classes.subtitle2}>
                   Los animes más populares de esta temporada te esperan
@@ -86,7 +86,7 @@ export default function Components(props) {
         <div className={classes.container}>
           
             <GridItem xs={12} sm={12} md={12}>
-            <Link to={"/login-page"} className={classes.link}>
+            <Link to={"/topAnime"} className={classes.link}>
               <h2 className={classes.titleCarousel}>Top Anime</h2>
               <h3 className={classes.subtitle2}>
                   Los animes mejor puntuados de todos los tiempos
@@ -99,7 +99,7 @@ export default function Components(props) {
               <div>
               <img src={image10} height="100%" width="100%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid} />
-              <Link to={"/login-page"} className={classes.link}>
+              <Link to={"/description"} className={classes.link}>
               <div className="slick-caption">
                 <h3 className={classes.leftcap}> Full Metal Alchemist </h3>
                 <h3 className={classes.rightcap}> 9.22 </h3>
@@ -111,7 +111,7 @@ export default function Components(props) {
               <div>
               <img src={image11} height="100%" width="100%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid}/>
-              <Link to={"/login-page"} className={classes.link}>
+              <Link to={"/description"} className={classes.link}>
               <div className="slick-caption">
                 <h3 className={classes.leftcap}>Tengen Toppa</h3>
                 <h3 className={classes.rightcap}> 8.68 </h3>
@@ -123,7 +123,7 @@ export default function Components(props) {
               <div>
               <img src={image12} height="100%" width="100%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid}/>
-              <Link to={"/login-page"} className={classes.link}>
+              <Link to={"/description"} className={classes.link}>
               <div className="slick-caption">
                 <h3 className={classes.leftcap}> Attack on Titan </h3>
                 <h3 className={classes.rightcap}> 9.06 </h3>
@@ -152,10 +152,10 @@ export default function Components(props) {
         <div className={classes.container}>
           
             <GridItem xs={12} sm={12} md={12}>
-            <Link to={"/login-page"} className={classes.link}>
-              <h2 className={classes.titleCarousel}>Top Anime</h2>
+            <Link to={"/topAnime"} className={classes.link}>
+              <h2 className={classes.titleCarousel}>Recomendados</h2>
               <h3 className={classes.subtitle2}>
-                  Los animes mejor puntuados de todos los tiempos
+                  Los animes Recomendados en base a lo que estas viendo.
                 </h3>
                 <br></br>
               </Link>
@@ -165,7 +165,7 @@ export default function Components(props) {
               <div>
               <img src={image10} height="100%" width="100%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid} />
-              <Link to={"/login-page"} className={classes.link}>
+              <Link to={"/description"} className={classes.link}>
               <div className="slick-caption">
                 <h3 className={classes.leftcap}> Full Metal Alchemist </h3>
                 <h3 className={classes.rightcap}> 9.22 </h3>
@@ -177,7 +177,7 @@ export default function Components(props) {
               <div>
               <img src={image11} height="100%" width="100%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid}/>
-              <Link to={"/login-page"} className={classes.link}>
+              <Link to={"/description"} className={classes.link}>
               <div className="slick-caption">
                 <h3 className={classes.leftcap}>Tengen Toppa</h3>
                 <h3 className={classes.rightcap}> 8.68 </h3>
@@ -189,7 +189,7 @@ export default function Components(props) {
               <div>
               <img src={image12} height="100%" width="100%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid}/>
-              <Link to={"/login-page"} className={classes.link}>
+              <Link to={"/description"} className={classes.link}>
               <div className="slick-caption">
                 <h3 className={classes.leftcap}> Attack on Titan </h3>
                 <h3 className={classes.rightcap}> 9.06 </h3>
@@ -201,7 +201,7 @@ export default function Components(props) {
               <div>
               <img src={image13} height="100%" width="100%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid}/>
-              <Link to={"/login-page"} className={classes.link}>
+              <Link to={"/description"} className={classes.link}>
               <div className="slick-caption">
                 <h3 className={classes.leftcap}> One Piece </h3>
                 <h3 className={classes.rightcap}> 8.50 </h3>
