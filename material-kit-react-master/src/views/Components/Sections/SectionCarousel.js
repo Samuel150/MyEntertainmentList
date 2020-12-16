@@ -37,7 +37,7 @@ export default function SectionCarousel() {
             <Card carousel>
               <Carousel {...settings}>
                 <div>
-                <Link to={"/login-page"} className={classes.link}>
+                <Link to={"/description"} className={classes.link}>
                   <img src={image1} alt="First slide" className="slick-image" />
                   <div className="slick-caption">
                     <h4 className={classes.carrouselCap}>
@@ -47,7 +47,7 @@ export default function SectionCarousel() {
                 </Link>
                 </div>
                 <div>
-                <Link to={"/login-page"} className={classes.link}>
+                <Link to={"/description"} className={classes.link}>
                   <img
                     src={image2}
                     alt="Second slide"
@@ -61,7 +61,7 @@ export default function SectionCarousel() {
                   </Link>
                 </div>
                 <div>
-                <Link to={"/login-page"} className={classes.link}>
+                <Link to={"/description"} className={classes.link}>
                   <img src={image3} alt="Third slide" className="slick-image" />
                   <div className="slick-caption" >
               
