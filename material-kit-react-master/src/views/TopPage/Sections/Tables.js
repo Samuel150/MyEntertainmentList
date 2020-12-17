@@ -223,7 +223,7 @@ export default function SectionPills() {
                             <TableCell align="center">Imagen</TableCell>
                             <TableCell align="left">Titulo</TableCell>
                             <TableCell align="center">Puntaje</TableCell>
-                            <TableCell align="center">Progreso</TableCell>
+                            <TableCell align="center">Episodios</TableCell>
                           </TableRow>
                         </TableHead>
                         <TableBody>
