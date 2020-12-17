@@ -61,7 +61,7 @@ export default function CustomInput(props) {
           htmlFor={id}
           {...labelProps}
         >
-          {labelText}
+          {error?error:labelText}
         </InputLabel>
       ) : null}
       <Input

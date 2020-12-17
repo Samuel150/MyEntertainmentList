@@ -17,7 +17,8 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
-import {Link} from 'react-router-dom';
+import { useForm, Form } from "views/SignUpPage/useForm.js"
+import {Link, useHistory } from 'react-router-dom';
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
@@ -26,23 +27,56 @@ const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-  
+  let history = useHistory();
 
   setTimeout(function() {
     setCardAnimation("");
   }, 700);
   const classes = useStyles();
-  //const { ...rest } = props;
+  const initialValues = {
+    names: "",
+    lastNames: "",
+    nick:"",
+    email:"",
+    password:"",
+    password2:""
+  }
+  const validate = ()=>{
+    let temp = {}
+    temp.names= values.names?"":"El campo nombres es obligatorio."
+    temp.lastNames= values.lastNames?"":"El campo apellidos es obligatorio."
+    temp.nick=values.nick?"":"El campo apodo es obligatorio."
+    temp.email =((/$^|.+@.+..+/).test(values.email) && values.email)?"":"Debe ingresar un correo valido."
+    temp.password=values.password?"":"Debe ingresar una contraseña."
+    if (!values.password2){
+      temp.password2="Debe repetir la contraseña."
+    }else if(values.password2!=values.password){
+      temp.password2="La contraseña no es igual."
+    }else{
+      temp.password2=""
+    }
+    setErrors({
+      ...temp
+    })
+    return Object.values(temp).every(x=>x==="")
+  }
+  const {
+    values,
+    setValues,
+    handelInputChange,
+    errors,
+    setErrors
+  }=useForm(initialValues)
+
+  const handleSubmit = e =>{
+    e.preventDefault()
+    if(validate()){
+      history.push("/");
+    }
+  }
+
   return (
     <div>
-    {/* <Header
-        absolute
-        fixedRight="false"
-        color="transparent"
-        logo="true" 
-        logoCenter="true"
-        hasNavbar="false"
-      /> */}
       <div
         className={classes.pageHeader}
         style={{
@@ -63,7 +97,7 @@ export default function LoginPage(props) {
             </GridItem>
             <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>
-                <form className={classes.form}>
+                {/* <form className={classes.form}> */}
                   <CardHeader color="primaryAnime" className={classes.cardHeader}>
                     <h4>Registrarse</h4>
                     <h5>con</h5>
@@ -98,15 +132,21 @@ export default function LoginPage(props) {
                     </div>
                   </CardHeader>
                   <p className={classes.divider}>O de manera clásica</p>
+                <Form onSubmit={handleSubmit}> 
                   <CardBody>
                     <CustomInput
                       labelText="Nombres"
                       id="first"
+                      error= {errors.names}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         type: "text",
+                        onChange: handelInputChange,
+                        name: "names",
+                        value: values.names,
+                        
                         endAdornment: (
                           <InputAdornment position="end">
                             <People className={classes.inputIconsColor} />
@@ -117,11 +157,16 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Apellidos"
                       id="first"
+                      error= {errors.lastNames}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         type: "text",
+                        onChange: handelInputChange,
+                        value: values.lastNames,
+                        
+                        name: "lastNames",
                         endAdornment: (
                           <InputAdornment position="end">
                             <People className={classes.inputIconsColor} />
@@ -132,11 +177,15 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Apodo"
                       id="first"
+                      error={errors.nick}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         type: "text",
+                        onChange: handelInputChange,
+                        value: values.nick,
+                        name: "nick",
                         endAdornment: (
                           <InputAdornment position="end">
                             <PersonOutline className={classes.inputIconsColor} />
@@ -147,11 +196,15 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Correo"
                       id="email"
+                      error= {errors.email}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
-                        type: "email",
+                        type: "text",
+                        onChange: handelInputChange,
+                        value: values.email,
+                        name: "email",
                         endAdornment: (
                           <InputAdornment position="end">
                             <Email className={classes.inputIconsColor} />
@@ -162,11 +215,16 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Contraseña"
                       id="pass"
+                      error= {errors.password}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         type: "password",
+                        onChange: handelInputChange,
+                        value: values.password,
+                        
+                        name: "password",
                         endAdornment: (
                           <InputAdornment position="end">
                             <Icon className={classes.inputIconsColor}>
@@ -180,11 +238,16 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Repetir Contraseña"
                       id="pass"
+                      error= {errors.password2}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         type: "password",
+                        onChange: handelInputChange,
+                        value: values.password2,
+                        
+                        name: "password2",
                         endAdornment: (
                           <InputAdornment position="end">
                             <Icon className={classes.inputIconsColor}>
@@ -197,16 +260,17 @@ export default function LoginPage(props) {
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Link to="/">
-                        <Button simple color="white" size="lg">
+                    {/* <Link to="/"> */}
+                        <Button simple color="white" type="submit" size="lg">
                         Registrarse
                         </Button>
-                    </Link>
+                    {/* </Link> */}
                   </CardFooter>
+                </Form>
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
                     <p>Ya tienes una cuenta <Link style={{color: "#0022ff"}} to="/login">Iniciar Sesión</Link></p>
                   </div>
-                </form>
+                {/* </form> */}
               </Card>
             </GridItem>
           </GridContainer>

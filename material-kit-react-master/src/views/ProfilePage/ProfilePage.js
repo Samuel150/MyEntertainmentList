@@ -54,7 +54,7 @@ export default function ProfilePage(props) {
                     <img style={{height: "10em"}} src={profile} alt="..." className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Samuel Huanca</h3>
+                    <h3 className={classes.title}>Jorge Rodriguez</h3>
                   </div>
                     <Button color="orange" href="mylists"><h4 className={classes.buttonText}>Mi Lista Anime</h4></Button>
                     

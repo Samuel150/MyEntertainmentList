@@ -13,7 +13,8 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
+import { useForm, Form } from "views/SignUpPage/useForm.js"
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from '@material-ui/core/FormControl';
@@ -47,6 +48,35 @@ export default function LoginPage(props) {
   }, 700);
   const classes = useStyles();
   const classesCheckbox = useStylesCheckbox();
+
+  let history = useHistory();
+  const initialValues = {
+    email: "",
+    password: ""
+  }
+  const validate = ()=>{
+    let temp = {}
+    temp.email= ((/$^|.+@.+..+/).test(values.email) && values.email)?"":"El campo email es obligatorio."
+    temp.password= values.password?"":"El campo contraseña es obligatorio."
+    setErrors({
+      ...temp
+    })
+    return Object.values(temp).every(x=>x==="")
+  }
+  const {
+    values,
+    setValues,
+    handelInputChange,
+    errors,
+    setErrors
+  }=useForm(initialValues)
+
+  const handleSubmit = e =>{
+    e.preventDefault()
+    if(validate()){
+      history.push("/");
+    }
+  }
   return (
       <div
         className={classes.pageHeader}
@@ -71,7 +101,7 @@ export default function LoginPage(props) {
             </GridItem>
             <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>
-                <form className={classes.form}>
+                {/* <form className={classes.form}> */}
                   <CardHeader color="primaryAnime" className={classes.cardHeader}>
                     <h4>Inciar Sesión</h4>
                     <h5>con</h5>
@@ -110,17 +140,21 @@ export default function LoginPage(props) {
                     </div>
                   </CardHeader>
                   <p className={classes.divider}>O de manera clásica</p>
+                  <Form onSubmit={handleSubmit}> 
                   <CardBody>
                     
                     <CustomInput
                       labelText="Correo"
                       id="email"
+                      error={errors.email}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
-                        type: "email",
-                        color: "primaryColorAnime",
+                        type: "text",
+                        onChange: handelInputChange,
+                        value: values.email,
+                        name: "email",
                         endAdornment: (
                           <InputAdornment position="end">
                             <Email className={classes.inputIconsColor} />
@@ -131,11 +165,15 @@ export default function LoginPage(props) {
                     <CustomInput
                       labelText="Contraseña"
                       id="pass"
+                      error={errors.password}
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         type: "password",
+                        onChange: handelInputChange,
+                        name: "password",
+                        value: values.names,
                         endAdornment: (
                           <InputAdornment position="end">
                             <Icon className={classes.inputIconsColor}>
@@ -162,13 +200,14 @@ export default function LoginPage(props) {
                   />Mantener Sesión Abierta
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                  <Link to="/">
-                    <Button simple color="white" size="lg">
+                  {/* <Link to="/"> */}
+                    <Button simple color="white" type="submit" size="lg">
                       Ingresar
                     </Button>
-                  </Link>
+                  {/* </Link> */}
                   
                   </CardFooter>
+                  </Form>
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
                     <p >Olvidaste tu contraseña? <Link   onClick={handleClickOpen} style={{color: "#0022ff"}}>  Recuperar Cuenta</Link></p>
                   </div>
@@ -176,7 +215,7 @@ export default function LoginPage(props) {
                   <div style={{textAlign: "center", marginBottom: "5%"}}>
                     <p>No tienes una cuenta? <Link style={{color: "#0022ff"}} to="/signUp">Crear Cuenta</Link></p>
                   </div>
-                </form>
+                {/* </form> */}
                 <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                   <DialogTitle id="form-dialog-title">Recuperar Cuenta</DialogTitle>
                   <DialogContent>
@@ -190,8 +229,7 @@ export default function LoginPage(props) {
                         fullWidth: true
                       }}
                       inputProps={{
-                        type: "email",
-                        color: "primaryColorAnime"
+                        type: "email"
                       }}
                     />
                   </DialogContent>
