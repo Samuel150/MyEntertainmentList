@@ -88,12 +88,14 @@ export default function LoginPage(props) {
         <div className={classes.container} style={{paddingTop: "1vh"}}>
           <GridContainer justify="center" direction="column" alignItems="center" style={{marginTop: "5vw"}}>
           <GridItem xs={6} sm={5} md={3} >
+              <Link to="/">
               <img
                 src={"./logoMALPNG.png"}
                 alt=""
                 width="100%"
                 className={classes.imgRounded + " " + classes.imgFluid}
               />
+              </Link>
             </GridItem>
             <GridItem xs={12} sm={12} md={5}>
               <Card className={classes[cardAnimaton]}>

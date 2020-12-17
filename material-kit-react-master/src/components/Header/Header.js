@@ -13,7 +13,7 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
-import image from "assets/img/logoMALPNG.png";
+import image from "assets/img/LogoWhiteMAL.png";
 // core components
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 import { useHistory } from "react-router-dom";
@@ -66,9 +66,9 @@ export default function Header(props) {
   if (logoCenter==="true"){
     marginRightValue = "41.3%";
   }
-  var brandComponent = <Button href="/" className={classes.title}>{hasNavbar?null:<img style={{height: '2.5em'}} src={image} />}</Button>;
+  var brandComponent = <Button href="/" className={classes.title}>{hasNavbar?null:<img style={{height: '3em'}} src={image} />}</Button>;
   if (fixedRight==="true"){
-    brandComponent = <Button href="/" className={classes.titleRight}>{hasNavbar?null:<img style={{height: '2.5em'}} src={image} />}</Button>;
+    brandComponent = <Button href="/" className={classes.titleRight}>{hasNavbar?null:<img style={{height: '3em'}} src={image} />}</Button>;
   }
   
   return (

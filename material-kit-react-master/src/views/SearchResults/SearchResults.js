@@ -14,6 +14,7 @@ import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import stylesCheckbox from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
 import Checkbox from "@material-ui/core/Checkbox";
+import {Link} from 'react-router-dom';
 import Check from "@material-ui/icons/Check";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
@@ -103,16 +104,20 @@ export default function SearchResults() {
   var items = [];
   for (var i = 0; i<resultados.length; i++){
     items.push(
+      
       <GridItem xs={12} sm={3}>
         <h4 style={{textAlign: "center"}}>{resultados[i].title}</h4>
         <p style={{textAlign: "center", fontSize: "11px"}}>Estudio: {resultados[i].studios} | Espisodios {resultados[i].episodes} | Tipo: {resultados[i].tipo}</p>
+        <Link to="/description">
         <img
           src={resultados[i].image}
           alt=""
           className={classes.imgRounded + " " + classes.imgFluid}
         />
+        </Link>
         <p align="justify">{resultados[i].description}</p>
       </GridItem>
+      
     )
   }
   var itemsTipo =[];
@@ -131,7 +136,6 @@ export default function SearchResults() {
             }}
           />
           }
-          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
           label={tipo[i]}
         />
       </GridItem>
@@ -153,7 +157,6 @@ export default function SearchResults() {
             }}
           />
           }
-          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
           label={genero[i]}
         />
       </GridItem>
@@ -175,7 +178,6 @@ export default function SearchResults() {
             }}
           />
           }
-          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
           label={estudio[i]}
         />
       </GridItem>
@@ -198,7 +200,6 @@ export default function SearchResults() {
             }}
           />
           }
-          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
           label={ranking[i]}
         />
       </GridItem>
@@ -221,8 +222,8 @@ export default function SearchResults() {
             }}
           />
           }
-          classes={{ label: classesCheckbox.label, root: classesCheckbox.labelRoot }} 
           label={filtro[i]}
+
         />
       </GridItem>
     )  
@@ -245,6 +246,7 @@ export default function SearchResults() {
         <div className={classes.container}>
             <div className={classes.title} >
               <h2>  Resultado de Búsqueda</h2>
+              <p>tipo: Serie; género: Accion, Aventura; filtro: todos los títulos</p>
             </div>
             <br/>
           <GridContainer>
@@ -272,6 +274,9 @@ export default function SearchResults() {
             </Paper>
             </GridItem>
           </GridContainer>
+          <div className={classes.title} style={{paddingTop: "0px"}} >
+              <h2>  Búsqueda Avanzada</h2>
+            </div>
           <h4 style={{textAlign: "left"}}>Tipo:</h4>
           <GridContainer style={{textAlign: "left"}}>
             {itemsTipo}
@@ -291,10 +296,12 @@ export default function SearchResults() {
           <h4 style={{textAlign: "left"}}>Filtro:</h4>
           <GridContainer style={{textAlign: "left"}} >
             {itemsFiltro}
-            <Button onClick={() => setCount(!count)} style={{float: "center",marginLeft: "5%", marginTop: "3%",verticalAlign: "middle"}} simple color="white" size="md">
-        <ArrowForwardIosIcon style={{ verticalAlign: "middle", fontSize: 40}}/>Buscar
-        </Button>
           </GridContainer>
+          
+          <Button onClick={() => setCount(!count)} style={{float: "center",marginLeft: "5%", marginTop: "3%",verticalAlign: "middle", marginBottom: "5%"}} simple color="white" size="large">
+          <ArrowForwardIosIcon style={{ verticalAlign: "middle", fontSize: 40}}/>Buscar
+          </Button>
+        
          
         </div>
         </>

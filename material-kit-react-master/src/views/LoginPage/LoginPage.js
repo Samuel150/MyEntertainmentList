@@ -56,7 +56,7 @@ export default function LoginPage(props) {
   }
   const validate = ()=>{
     let temp = {}
-    temp.email= ((/$^|.+@.+..+/).test(values.email) && values.email)?"":"El campo email es obligatorio."
+    temp.email= ((/$^|.+@.+..+/).test(values.email) && values.email)?"":"Ingresar un correo valido."
     temp.password= values.password?"":"El campo contraseña es obligatorio."
     setErrors({
       ...temp
@@ -91,12 +91,14 @@ export default function LoginPage(props) {
           <GridContainer justify="center" direction="column" alignItems="flex-end">
             <GridItem xs={9} sm={9} md={4} >
               <div >
+              <Link to="/">
               <img
                 src={"./logoMALPNG.png"}
                 alt=""
                 width="70%"
                 className={classes.imgRounded + " " + classes.imgFluid}
               />
+              </Link>
               </div>
             </GridItem>
             <GridItem xs={12} sm={12} md={5}>
