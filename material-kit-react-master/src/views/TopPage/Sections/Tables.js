@@ -30,6 +30,30 @@ import image1 from "assets/img/portFMA.jpg";
 import image2 from "assets/img/portGL.jpg";
 import image3 from "assets/img/portSNK.jpg";
 import image4 from "assets/img/portOP.jpg";
+import image5 from "assets/img/portSG.jpg";
+import image6 from "assets/img/portGin.jpg";
+import image7 from "assets/img/portCB.jpg";
+import image8 from "assets/img/portHI.jpg";
+import image9 from "assets/img/portVS.jpg";
+import image10 from "assets/img/portKS.jpg";
+import image11 from "assets/img/portGH.jpg";
+import image12 from "assets/img/portCG.jpg";
+import image1E from "assets/img/shingeki2.jpg";
+import image2E from "assets/img/haikyu.jpg";
+import image3E from "assets/img/tian_guan.jpg";
+import image4E from "assets/img/jujutsu.jpg";
+import image1M from "assets/img/koe_no_katachi.jpg";
+import image2M from "assets/img/kimi_no_na_wa.jpg";
+import image3M from "assets/img/chihiro.jpg";
+import image4M from "assets/img/kizumunogatari.jpg";
+import image5M from "assets/img/mononoke.jpg";
+import imagePo1 from "assets/img/death_note.jpg";
+import imagePo2 from "assets/img/shigeki.jpg";
+import imagePo3 from "assets/img/sword_art.jpg";
+import imagePo4 from "assets/img/one_punch.jpg";
+import imagePo5 from "assets/img/hero_academia.jpg";
+import imagePo6 from "assets/img/naruto.jpg";
+import imagePo7 from "assets/img/no_game.jpg";
 
 function createData(number, image, titulo, puntaje, progreso) {
   return { number, image, titulo, puntaje, progreso };
@@ -37,10 +61,59 @@ function createData(number, image, titulo, puntaje, progreso) {
 const rows = [
   createData(1, image1, "Full Metal Alchemist", 10, 64),
   createData(2, image2, "Tengen Toppa Gurren Lagann", 10, 27),
-  createData(3, image3, "Shingeki no kyojin", 9, 20),
-  createData(4, image4, "One piece", 9, 925),
+  createData(3, image7, "Cowboy Bebop", 10, 26),
+  createData(4, image5, "Steins;Gate", 9, 21),
+  createData(5, image6, "Gintama", 9, 215),
+  createData(6, image12, "Code Geass", 9, 50),
+  createData(7, image3, "Shingeki no kyojin", 9, 20),
+  createData(8, image4, "One piece", 9, 925),
+  createData(9, image8, "Hajime no Ippo", 9, 75),
+  createData(10, image9, "Vinland Saga", 8, 22),
+  createData(11, image10, "Kaguya-sama wa Kokurasetai?", 8, 11),
+  createData(12, image11, "The God of High School", 5, 4),
 
 ];
+
+const rowsMovies = [
+  createData(1, image1M, "Koe no Katachi", 9.00, 1),
+  createData(2, image2M, "Kimi no Na wa", 8.99, 1),
+  createData(3, image3M, "Sen to Chihiro no Kamikakushi", 8.84, 1),
+  createData(4, image4M, "Kizumonogatari III: Reiketsu-hen", 8.82, 1),
+  createData(5, image5M, "Mononoke Hime", 8.72, 1),
+  createData(6, image8, "Hajime no Ippo", 8.5, 75),
+  createData(7, image9, "Vinland Saga", 8, 22),
+  createData(8, image10, "Kaguya-sama wa Kokurasetai?", 8, 1),
+  createData(9, image11, "The God of High School", 8, 1),
+  createData(10, image3, "Shingeki no kyojin", 8, 1),
+  createData(11, image6, "Gintama", 7.5, 1),
+  createData(12, image7, "Cowboy Bebop", 7.4, 1),
+]
+
+const rowsEmision = [
+  createData(1, image1E, "Shingeki no Kyojin: The Final Season", 9.05, 16),
+  createData(2, image4, "One piece", 9, 925),
+  createData(3, image2E, "Haikyuu!!: To the Top 2nd Season", 8.56, 12),
+  createData(4, image3E, "Tian Guan Ci Fu", 8.52, 11),
+  createData(5, image4E, "Jujutsu Kaisen", 8.45, 24),
+  createData(6, image5M, "Mononoke Hime", 8.72, 1),
+  createData(7, image8, "Hajime no Ippo", 8, 75),
+  createData(8, image9, "Vinland Saga", 8, 22),
+  createData(9, image10, "Kaguya-sama wa Kokurasetai?", 8, 11),
+  createData(10, image11, "The God of High School", 5, 4),
+]
+
+const rowsPopulares = [
+  createData(1, imagePo1, "Death Note", 8.63, 37),
+  createData(2, imagePo2, "Shingeki no Kyojin", 8.46, 25),
+  createData(3, imagePo3, "Sword Art Online", 7.28, 12),
+  createData(4, image1, "Fullmetal Alchemist: Brotherhood", 9.21, 64),
+  createData(5, imagePo4, "One Punch Man", 8.59, 24),
+  createData(6, imagePo5, "Boku no Hero Academia", 8.15, 13),
+  createData(7, imagePo6, "Naruto", 7.9, 220),
+  createData(8, image5, "Steins;Gate", 9, 21),
+  createData(9, imagePo7, "No Game No Life", 8.23, 12),
+  createData(10, image2M, "Kimi no Na wa", 8.99, 1),
+]
 
 const resultados = [
   {
@@ -122,7 +195,7 @@ export default function SectionPills() {
         <p style={{textAlign: "center", fontSize: "11px"}}>Estudio: {resultados[i].studios} | Espisodios {resultados[i].episodes} | Tipo: {resultados[i].tipo}</p>
         <img
           src={resultados[i].image}
-          height="60%" width="20%" alt=""
+          height="100%" width="100%" alt=""
           className={classes.imgRounded + " " + classes.imgFluid}
         />
         <p align="justify">{resultados[i].description}</p>
@@ -185,13 +258,13 @@ export default function SectionPills() {
                           </TableRow>
                         </TableHead>
                         <TableBody>
-                          {rows.map((row) => (
+                          {rowsEmision.map((row) => (
                             <TableRow key={row.number}>
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
                               <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
-                              <TableCell  align="left"> {row.titulo} </TableCell>
+                              <TableCell  align="left"> <a style={{color: "black"}} href="description">{row.titulo}</a> </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
                             </TableRow>
@@ -216,13 +289,13 @@ export default function SectionPills() {
                           </TableRow>
                         </TableHead>
                         <TableBody>
-                          {rows.map((row) => (
+                          {rowsMovies.map((row) => (
                             <TableRow key={row.number}>
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
                               <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
-                              <TableCell  align="left"> {row.titulo} </TableCell>
+                              <TableCell  align="left"> <a style={{color: "black"}} href="description">{row.titulo}</a> </TableCell>
                               <TableCell align="left">{row.puntaje}</TableCell>
                               <TableCell align="left">{row.progreso}</TableCell>
                             </TableRow>
@@ -235,9 +308,32 @@ export default function SectionPills() {
                   {
                     tabButton: "Mas Popular",
                     tabContent: (
-                      <GridContainer spacing={4}>
-                          {items}
-                      </GridContainer>
+                      <TableContainer component={Paper}>
+                      <Table className={classes.table} size="big" aria-label="a dense table" stickyHeader aria-label="sticky table">
+                        <TableHead>
+                          <TableRow>
+                            <TableCell>#</TableCell>
+                            <TableCell align="left">Imagen</TableCell>
+                            <TableCell align="left">Titulo</TableCell>
+                            <TableCell align="left">Puntaje</TableCell>
+                            <TableCell align="left">Progreso</TableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {rowsPopulares.map((row) => (
+                            <TableRow key={row.number}>
+                              <TableCell component="th" scope="row">
+                                {row.number}
+                              </TableCell>
+                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
+                              <TableCell  align="left"> <a style={{color: "black"}} href="description">{row.titulo}</a> </TableCell>
+                              <TableCell align="left">{row.puntaje}</TableCell>
+                              <TableCell align="left">{row.progreso}</TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
                     )
                   }
                 ]}
