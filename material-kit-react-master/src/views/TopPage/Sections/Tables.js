@@ -220,10 +220,10 @@ export default function SectionPills() {
                         <TableHead>
                           <TableRow>
                             <TableCell>#</TableCell>
-                            <TableCell align="left">Imagen</TableCell>
+                            <TableCell align="center">Imagen</TableCell>
                             <TableCell align="left">Titulo</TableCell>
-                            <TableCell align="left">Puntaje</TableCell>
-                            <TableCell align="left">Progreso</TableCell>
+                            <TableCell align="center">Puntaje</TableCell>
+                            <TableCell align="center">Progreso</TableCell>
                           </TableRow>
                         </TableHead>
                         <TableBody>
@@ -232,10 +232,10 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
+                              <TableCell align="center"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> <a style={{color: "black"}} href="description">{row.titulo}</a> </TableCell>
-                              <TableCell align="left">{row.puntaje}</TableCell>
-                              <TableCell align="left">{row.progreso}</TableCell>
+                              <TableCell align="center">{row.puntaje}</TableCell>
+                              <TableCell align="center">{row.progreso}</TableCell>
                             </TableRow>
                           ))}
                         </TableBody>
@@ -251,10 +251,10 @@ export default function SectionPills() {
                         <TableHead>
                           <TableRow>
                             <TableCell>#</TableCell>
-                            <TableCell align="left">Imagen</TableCell>
+                            <TableCell align="center">Imagen</TableCell>
                             <TableCell align="left">Titulo</TableCell>
-                            <TableCell align="left">Puntaje</TableCell>
-                            <TableCell align="left">Progreso</TableCell>
+                            <TableCell align="center">Puntaje</TableCell>
+                            <TableCell align="center">Episodios</TableCell>
                           </TableRow>
                         </TableHead>
                         <TableBody>
@@ -263,10 +263,10 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
+                              <TableCell align="center"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> <a style={{color: "black"}} href="description">{row.titulo}</a> </TableCell>
-                              <TableCell align="left">{row.puntaje}</TableCell>
-                              <TableCell align="left">{row.progreso}</TableCell>
+                              <TableCell align="center">{row.puntaje}</TableCell>
+                              <TableCell align="center">{row.progreso}</TableCell>
                             </TableRow>
                           ))}
                         </TableBody>
@@ -282,10 +282,10 @@ export default function SectionPills() {
                         <TableHead>
                           <TableRow>
                             <TableCell>#</TableCell>
-                            <TableCell align="left">Imagen</TableCell>
+                            <TableCell align="center">Imagen</TableCell>
                             <TableCell align="left">Titulo</TableCell>
-                            <TableCell align="left">Puntaje</TableCell>
-                            <TableCell align="left">Progreso</TableCell>
+                            <TableCell align="center">Puntaje</TableCell>
+                            <TableCell align="center">Episodios</TableCell>
                           </TableRow>
                         </TableHead>
                         <TableBody>
@@ -294,10 +294,10 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
+                              <TableCell align="center"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> <a style={{color: "black"}} href="description">{row.titulo}</a> </TableCell>
-                              <TableCell align="left">{row.puntaje}</TableCell>
-                              <TableCell align="left">{row.progreso}</TableCell>
+                              <TableCell align="center">{row.puntaje}</TableCell>
+                              <TableCell align="center">{row.progreso}</TableCell>
                             </TableRow>
                           ))}
                         </TableBody>
@@ -313,10 +313,10 @@ export default function SectionPills() {
                         <TableHead>
                           <TableRow>
                             <TableCell>#</TableCell>
-                            <TableCell align="left">Imagen</TableCell>
+                            <TableCell align="center">Imagen</TableCell>
                             <TableCell align="left">Titulo</TableCell>
-                            <TableCell align="left">Puntaje</TableCell>
-                            <TableCell align="left">Progreso</TableCell>
+                            <TableCell align="center">Puntaje</TableCell>
+                            <TableCell align="center">Episodios</TableCell>
                           </TableRow>
                         </TableHead>
                         <TableBody>
@@ -325,10 +325,10 @@ export default function SectionPills() {
                               <TableCell component="th" scope="row">
                                 {row.number}
                               </TableCell>
-                              <TableCell align="left"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
+                              <TableCell align="center"> <img src= {row.image} alt="" border="0" height="100" width="80" /> </TableCell>
                               <TableCell  align="left"> <a style={{color: "black"}} href="description">{row.titulo}</a> </TableCell>
-                              <TableCell align="left">{row.puntaje}</TableCell>
-                              <TableCell align="left">{row.progreso}</TableCell>
+                              <TableCell align="center">{row.puntaje}</TableCell>
+                              <TableCell align="center">{row.progreso}</TableCell>
                             </TableRow>
                           ))}
                         </TableBody>
