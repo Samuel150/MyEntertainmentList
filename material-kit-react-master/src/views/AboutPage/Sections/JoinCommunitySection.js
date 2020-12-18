@@ -54,7 +54,7 @@ export default function JoinCommunitySection() {
     <div className={classes.section}>
     <GridContainer justify="center">
       <GridItem xs={12} sm={12} md={8}>
-        <h2 className={classes.title}>¡Descubre más sobre el mundo del anime y el manga ahora!</h2>
+        <h2 className={classes.title}>¡Descubre más sobre el mundo del anime ahora!</h2>
       </GridItem>
       <GridItem xs={12} sm={12} md={6}>
         <Button simple href="/signUp">Registrarme</Button>
