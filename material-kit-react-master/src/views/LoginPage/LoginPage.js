@@ -17,9 +17,7 @@ import {Link, useHistory} from 'react-router-dom';
 import { useForm, Form } from "views/SignUpPage/useForm.js"
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from '@material-ui/core/FormControl';
 import Check from "@material-ui/icons/Check";
-import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -115,7 +113,9 @@ export default function LoginPage(props) {
                         color="transparent"
                         onClick={e => e.preventDefault()}
                       >
+                        <Link to="/" style={{color: "white"}}> 
                         <i className={"fab fa-twitter"} />
+                        </Link>
                       </Button>
                       <Button
                         justIcon
@@ -124,7 +124,9 @@ export default function LoginPage(props) {
                         color="transparent"
                         onClick={e => e.preventDefault()}
                       >
+                        <Link to="/" style={{color: "white"}}> 
                         <i className={"fab fa-facebook"} />
+                        </Link>
                       </Button>
                     
                       <Button
@@ -135,8 +137,9 @@ export default function LoginPage(props) {
                         onClick={e => e.preventDefault()}
                       >
                        
+                        <Link to="/" style={{color: "white"}}> 
                           <i className={"fab fa-google-plus-g"} />
-                       
+                        </Link>
                       </Button>
                 
                     </div>

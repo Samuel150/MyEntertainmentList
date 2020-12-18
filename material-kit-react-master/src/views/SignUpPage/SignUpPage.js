@@ -45,7 +45,6 @@ export default function LoginPage(props) {
     let temp = {}
     temp.names= values.names?"":"El campo nombres es obligatorio."
     temp.lastNames= values.lastNames?"":"El campo apellidos es obligatorio."
-    temp.nick=values.nick?"":"El campo apodo es obligatorio."
     temp.email =((/$^|.+@.+..+/).test(values.email) && values.email)?"":"Debe ingresar un correo valido."
     temp.password=values.password?"":"Debe ingresar una contraseña."
     if (!values.password2){
@@ -103,7 +102,9 @@ export default function LoginPage(props) {
                   <CardHeader color="primaryAnime" className={classes.cardHeader}>
                     <h4>Registrarse</h4>
                     <h5>con</h5>
+                    
                     <div className={classes.socialLine}>
+                    
                       <Button
                         justIcon
                         href="#pablo"
@@ -111,8 +112,12 @@ export default function LoginPage(props) {
                         color="transparent"
                         onClick={e => e.preventDefault()}
                       >
+                      <Link to="/" style={{color: "white"}}> 
                         <i className={"fab fa-twitter"} />
+                      </Link>
                       </Button>
+                      
+                      
                       <Button
                         justIcon
                         href="#pablo"
@@ -120,7 +125,9 @@ export default function LoginPage(props) {
                         color="transparent"
                         onClick={e => e.preventDefault()}
                       >
+                        <Link to="/" style={{color: "white"}}> 
                         <i className={"fab fa-facebook"} />
+                        </Link>
                       </Button>
                       <Button
                         justIcon
@@ -129,9 +136,12 @@ export default function LoginPage(props) {
                         color="transparent"
                         onClick={e => e.preventDefault()}
                       >
+                        <Link to="/" style={{color: "white"}}> 
                         <i className={"fab fa-google-plus-g"} />
+                        </Link>
                       </Button>
                     </div>
+                    
                   </CardHeader>
                   <p className={classes.divider}>O de manera clásica</p>
                 <Form onSubmit={handleSubmit}> 
@@ -172,25 +182,6 @@ export default function LoginPage(props) {
                         endAdornment: (
                           <InputAdornment position="end">
                             <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Apodo"
-                      id="first"
-                      error={errors.nick}
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        onChange: handelInputChange,
-                        value: values.nick,
-                        name: "nick",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <PersonOutline className={classes.inputIconsColor} />
                           </InputAdornment>
                         )
                       }}
